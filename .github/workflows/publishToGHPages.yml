@@ -2,7 +2,7 @@ name: Publish to Github Pages
 
 on:
   schedule:
-    - cron: '5 * * * *'
+    - cron: "5 * * * *"
   push:
 
 env:
@@ -12,7 +12,7 @@ jobs:
   run:
     name: Publish JSON
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -24,12 +24,11 @@ jobs:
           key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
         run: npm ci --no-audit
-      - name: Run Unit Tests
-        run: npm test
+
       - name: Compile TypeScript
         run: npx tsc
       - name: Update JSON
-        run: node dist/fetch.js 
+        run: node dist/fetch.js
       - name: Publish to GitHub pages
         run: |
           echo "machine github.com login accesskey password ${{ secrets.TOKEN }}" > ~/.netrc
