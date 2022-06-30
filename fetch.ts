@@ -1,6 +1,16 @@
-import { getWorkflowRuns } from "./getWorkflowRuns.js";
-import { promises as fs } from "fs";
+import { promises as fs } from 'fs'
+import { getStravaData } from './getStravaData.js'
 
-getWorkflowRuns().then((runs) =>
-  fs.writeFile("JSONObject.json", JSON.stringify(runs, null, 2), "utf-8")
-);
+getStravaData()
+	.then(
+		async (data) =>
+			await fs.writeFile(
+				'JSONObject.json',
+				JSON.stringify(data, null, 2),
+				'utf-8',
+			),
+	)
+	.catch((error) => {
+		console.error('Failed to write to shadow')
+		console.error(error)
+	})
