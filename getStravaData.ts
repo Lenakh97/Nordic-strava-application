@@ -68,22 +68,28 @@ export const getStravaData = async (): Promise<StravaObject> => {
 		clubPoints += clubDistance / 1000 / memberCount
 		JSONWeeklySummary.push({
 			name: clubInfo.data.name,
-			distance: clubDistance / 1000,
-			hours: clubTotalHours,
-			clubPoints: clubPoints,
-			elevation: clubElevation,
+			distance: roundNumbers(clubDistance / 1000),
+			hours: roundNumbers(clubTotalHours),
+			clubPoints: roundNumbers(clubPoints),
+			elevation: roundNumbers(clubElevation),
 		})
 		totalClubDistance += clubDistance / 1000
 		totalClubHours += clubDistance
 		totalClubPoints += clubPoints
 	}
+
 	return {
 		timestamp: Date.now(),
 		weekly_summary: JSONWeeklySummary,
 		totalData: {
-			totalDistance: totalClubDistance,
-			totalHours: totalClubHours,
-			totalPoints: totalClubPoints,
+			totalDistance: roundNumbers(totalClubDistance),
+			totalHours: roundNumbers(totalClubHours),
+			totalPoints: roundNumbers(totalClubPoints),
 		},
 	}
+}
+
+const roundNumbers = (num: number) => {
+	const newNum = Math.round(num * 10) / 10
+	return newNum
 }
