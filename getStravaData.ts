@@ -8,21 +8,24 @@ const teamList = [
 
 export type StravaObject = {
 	timestamp: number
-	weekly_summary: {
-		name: string
-		distance: number
-		hours: number
-		clubPoints: number
-		elevation: number
-	}[]
 	totalData: { totalDistance: number; totalHours: number; totalPoints: number }
+	weekly_summary: {
+		weekNumber: number
+		updates: {
+			name: string
+			distance: number
+			hours: number
+			clubPoints: number
+			elevation: number
+		}[]
+	}[]
 }
 
 export const getStravaData = async (): Promise<StravaObject> => {
-	//The next three lines needs to be hidden
-	const CLIENT_ID = '87925'
-	const CLIENT_SECRET = '9d5384df9ce4c2d9994b4e596c2e37e346803535'
-	let REFRESH_TOKEN = '4d52e3eeab3ddf7f2694793b4e3ac20fbcb3f0eb'
+	//The next environment variables needs to be used from actions
+	const CLIENT_ID = `${process.env.CLIENT_ID}`
+	const CLIENT_SECRET = `${process.env.CLIENT_SECRET}`
+	let REFRESH_TOKEN = `${process.env.REFRESH_TOKEN}`
 	const res = await postInfoToApi(
 		`https://www.strava.com/api/v3/oauth/token?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&grant_type=refresh_token&refresh_token=${REFRESH_TOKEN}`,
 	)
@@ -32,6 +35,7 @@ export const getStravaData = async (): Promise<StravaObject> => {
 	let totalClubDistance = 0
 	let totalClubHours = 0
 	let totalClubPoints = 0
+	const weekly_summary = []
 	for (const team of teamList) {
 		const clubInfo = await getInfoFromApi(
 			`https://www.strava.com/api/v3/clubs/${team}?access_token=${accessToken}`,
@@ -77,15 +81,19 @@ export const getStravaData = async (): Promise<StravaObject> => {
 		totalClubHours += clubDistance
 		totalClubPoints += clubPoints
 	}
+	weekly_summary.push({
+		weekNumber: 1,
+		updates: JSONWeeklySummary,
+	})
 
 	return {
 		timestamp: Date.now(),
-		weekly_summary: JSONWeeklySummary,
 		totalData: {
 			totalDistance: roundNumbers(totalClubDistance),
 			totalHours: roundNumbers(totalClubHours),
 			totalPoints: roundNumbers(totalClubPoints),
 		},
+		weekly_summary: weekly_summary,
 	}
 }
 
