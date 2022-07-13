@@ -106,7 +106,7 @@ export const getStravaData = async (): Promise<StravaObject> => {
 			weekNumber: 2,
 			updates: JSONWeeklySummary,
 		})
-	} else if (timeStamp > startTimeStamp) {
+	} else if (timeStamp < weekTwoTimestamp) {
 		weekly_summary.push({
 			weekNumber: 1,
 			updates: JSONWeeklySummary,
