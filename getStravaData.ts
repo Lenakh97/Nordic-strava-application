@@ -1,7 +1,7 @@
+import { fetchTimeStamp } from './lib/fetchTimestamp.js'
 import { getInfoFromApi } from './lib/getInfoFromApi.js'
 import { postInfoToApi } from './lib/postInfoToApi.js'
 
-//Should I hide these? It's not possible to use them when you're not in the club
 const teamList = [
 	838205, 982093, 838211, 838207, 838209, 838203, 232813, 838200,
 ]
@@ -22,7 +22,12 @@ export type StravaObject = {
 }
 
 export const getStravaData = async (): Promise<StravaObject> => {
-	//The next environment variables needs to be used from actions
+	const startTimeStamp = 1657521789
+	const weekTwoTimestamp = startTimeStamp + 1 //+ 604800
+	const weekThreeTimestamp = weekTwoTimestamp + 604800
+	const weekFourTimestamp = weekThreeTimestamp + 604800
+	const weekFiveTimestamp = weekFourTimestamp + 604800
+	const timeStamp = await fetchTimeStamp()
 	const CLIENT_ID = `${process.env.CLIENT_ID}`
 	const CLIENT_SECRET = `${process.env.CLIENT_SECRET}`
 	let REFRESH_TOKEN = `${process.env.REFRESH_TOKEN}`
@@ -41,7 +46,7 @@ export const getStravaData = async (): Promise<StravaObject> => {
 			`https://www.strava.com/api/v3/clubs/${team}?access_token=${accessToken}`,
 		)
 		const clubActivities = await getInfoFromApi(
-			`https://www.strava.com/api/v3/clubs/${team}/activities?access_token=${accessToken}&per_page=200`,
+			`https://www.strava.com/api/v3/clubs/${team}/activities?access_token=${accessToken}&per_page=200&after=${timeStamp}`,
 		)
 		let clubDistance = 0
 		let clubTotalHours = 0
@@ -78,13 +83,35 @@ export const getStravaData = async (): Promise<StravaObject> => {
 			elevation: roundNumbers(clubElevation),
 		})
 		totalClubDistance += clubDistance / 1000
-		totalClubHours += clubDistance
+		totalClubHours += clubTotalHours
 		totalClubPoints += clubPoints
 	}
-	weekly_summary.push({
-		weekNumber: 1,
-		updates: JSONWeeklySummary,
-	})
+	if (timeStamp > weekFiveTimestamp) {
+		weekly_summary.push({
+			weekNumber: 5,
+			updates: JSONWeeklySummary,
+		})
+	} else if (timeStamp > weekFourTimestamp) {
+		weekly_summary.push({
+			weekNumber: 4,
+			updates: JSONWeeklySummary,
+		})
+	} else if (timeStamp > weekThreeTimestamp) {
+		weekly_summary.push({
+			weekNumber: 3,
+			updates: JSONWeeklySummary,
+		})
+	} else if (timeStamp > weekTwoTimestamp) {
+		weekly_summary.push({
+			weekNumber: 2,
+			updates: JSONWeeklySummary,
+		})
+	} else if (timeStamp > startTimeStamp) {
+		weekly_summary.push({
+			weekNumber: 1,
+			updates: JSONWeeklySummary,
+		})
+	}
 
 	return {
 		timestamp: Date.now(),
