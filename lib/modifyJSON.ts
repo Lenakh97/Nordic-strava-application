@@ -7,7 +7,6 @@ export const modifyJSON = async (
 	weekNumber: number,
 	teamList: number[],
 	accessToken: string,
-	timeStamp: number,
 ): Promise<StravaObject> => {
 	const JSONWeeklySummary = []
 	let totalClubDistance = fetchedData.totalData.totalDistance
@@ -21,7 +20,7 @@ export const modifyJSON = async (
 			`https://www.strava.com/api/v3/clubs/${team}?access_token=${accessToken}`,
 		)
 		const clubActivities = await getInfoFromApi(
-			`https://www.strava.com/api/v3/clubs/${team}/activities?access_token=${accessToken}&per_page=200&after=${timeStamp}`,
+			`https://www.strava.com/api/v3/clubs/${team}/activities?access_token=${accessToken}&per_page=200&after=${fetchedData.timestamp}`,
 		)
 		let clubDistance = 0
 		let clubTotalHours = 0
