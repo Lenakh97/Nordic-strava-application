@@ -32,16 +32,19 @@ jobs:
         run: npx tsc
       - name: Update JSON
         run: node dist/fetch.js
-      - name: Publish to GitHub pages
+
+      - name: Check if data files were updated
+        run: |
+          if ! git diff --exit-code --name-only data-*.json; then
+            echo "UPDATED=1" >> $GITHUB_ENV
+          fi
+
+      - name: Commit updated data files
+        if: env.UPDATED == '1'
         run: |
           echo "machine github.com login accesskey password ${{ secrets.TOKEN }}" > ~/.netrc
           git config --global user.email "actions@example.com"
           git config --global user.name "GitHub Actions"
-          mkdir public
-          cp JSONObject.json ./public
-          cd public
-          git init
-          git add JSONObject.json
+          git add data-*.json
           git commit -m "update JSON"
-          git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
-          git push -f origin HEAD:gh-pages
+          git push
