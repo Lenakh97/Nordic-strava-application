@@ -5,7 +5,7 @@ getStravaData()
 	.then(
 		async (data) =>
 			await fs.writeFile(
-				`${new Date().toISOString()}.json`,
+				`data-${new Date().toISOString()}.json`,
 				JSON.stringify(data, null, 2),
 				'utf-8',
 			),
