@@ -44,6 +44,11 @@ jobs:
           echo "machine github.com login accesskey password ${{ secrets.TOKEN }}" > ~/.netrc
           git config --global user.email "actions@example.com"
           git config --global user.name "GitHub Actions"
+          mkdir public
+          cp data-*.json ./public
+          cd public
+          git init
           git add data-*.json
           git commit -m "update JSON"
+          git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
           git push -f origin HEAD:gh-pages
