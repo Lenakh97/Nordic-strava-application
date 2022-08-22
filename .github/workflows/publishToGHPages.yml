@@ -51,4 +51,4 @@ jobs:
           git add data-*.json
           git commit -m "update JSON"
           git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
-          git push -f origin HEAD:gh-pages
+          git push origin HEAD:gh-pages
