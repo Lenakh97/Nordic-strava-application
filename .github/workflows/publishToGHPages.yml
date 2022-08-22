@@ -48,7 +48,7 @@ jobs:
           cp data-*.json ./public
           cd public
           git fetch
-          git checkout gh-pages
           git add data-*.json
+          git checkout gh-pages
           git commit -m "update JSON"
           git push origin HEAD:gh-pages
