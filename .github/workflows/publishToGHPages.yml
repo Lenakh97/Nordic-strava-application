@@ -44,10 +44,12 @@ jobs:
           echo "machine github.com login accesskey password ${{ secrets.TOKEN }}" > ~/.netrc
           git config --global user.email "actions@example.com"
           git config --global user.name "GitHub Actions"
+          pwd
           mkdir public
           cp data-*.json ./public
           cd public
           git init
+          git branch
           git pull
           git add data-*.json
           git commit -m "update JSON"
