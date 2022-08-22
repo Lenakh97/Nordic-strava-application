@@ -57,6 +57,9 @@ export const makeinitialJSON = async (
 		totalClubHours += clubTotalHours
 		totalClubPoints += clubPoints
 	}
+	weekly_summary.push({
+		updates: JSONWeeklySummary,
+	})
 	return {
 		timestamp: Math.round(Date.now() / 1000),
 		totalData: {
