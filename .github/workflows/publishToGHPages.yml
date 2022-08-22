@@ -47,7 +47,8 @@ jobs:
           mkdir public
           cp data-*.json ./public
           cd public
-          git pull remote gh-pages
+          git fetch
+          git checkout branch gh-pages
           git add data-*.json
           git commit -m "update JSON"
           git push origin HEAD:gh-pages
