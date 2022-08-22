@@ -1,6 +1,6 @@
 import { findLatestTimestamp } from './lib/findLatestTimestamp.js'
 import { getWeek } from './lib/getWeek.js'
-import { makeJSON } from './lib/makeInitialJSON.js'
+import { makeJSON } from './lib/makeJSON.js'
 import { postInfoToApi } from './lib/postInfoToApi.js'
 
 const teamList = [
