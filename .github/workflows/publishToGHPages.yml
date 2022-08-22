@@ -40,7 +40,6 @@ jobs:
           fi
 
       - name: Commit updated data files
-        if: env.UPDATED == '1'
         run: |
           echo "machine github.com login accesskey password ${{ secrets.TOKEN }}" > ~/.netrc
           git config --global user.email "actions@example.com"
