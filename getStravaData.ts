@@ -39,7 +39,7 @@ export const getStravaData = async (): Promise<StravaObject> => {
 	/*
 	FIRST OF ALL WE MIGHT HAVE NO DATA, MAKE INITIAL REQUEST
 	*/
-	const startTimeStamp = 1659304800
+	const startTimeStamp = 1661152000
 	//const fetchingTimestamp = Math.round(Date.now() / 1000)
 	const JSONObject = await makeinitialJSON(teamList, accessToken, startTimeStamp)
 
