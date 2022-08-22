@@ -1,10 +1,9 @@
 import axios from 'axios'
-import { StravaObject } from '../getStravaData'
 
-export const fetchTimeStamp = async (): Promise<number> => {
-	const result = await axios.get<StravaObject>(
-		`https://lenakh97.github.io/Nordic-strava-application/JSONObject.json?${Date.now()}`,
+export const fetchTimeStamp = async (path: string): Promise<any> => {
+	const result = await axios.get<any>(
+		`https://lenakh97.github.io/Nordic-strava-application/${path}`,
 	)
 
-	return result.data.timestamp
+	return result.data
 }

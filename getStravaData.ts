@@ -1,7 +1,6 @@
-//import { fetchData } from './lib/fetchData.js'
-//import { getWeek } from './lib/getWeek.js'
-import { makeinitialJSON } from './lib/makeInitialJSON.js'
-//import { modifyJSON } from './lib/modifyJSON.js'
+import { findLatestTimestamp } from './lib/findLatestTimestamp.js'
+import { getWeek } from './lib/getWeek.js'
+import { makeJSON } from './lib/makeInitialJSON.js'
 import { postInfoToApi } from './lib/postInfoToApi.js'
 
 const teamList = [
@@ -33,20 +32,24 @@ export const getStravaData = async (): Promise<StravaObject> => {
 	const res = await postInfoToApi(
 		`https://www.strava.com/api/v3/oauth/token?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&grant_type=refresh_token&refresh_token=${REFRESH_TOKEN}`,
 	)
-	//REFRESH_TOKEN = res.data.refresh_token
 	const accessToken: string = res.data.access_token
+	//1.august 2022
+	const startTimeStamp = 1659346442
 
 	/*
-	FIRST OF ALL WE MIGHT HAVE NO DATA, MAKE INITIAL REQUEST
+	GOT THROUGH ALL FILES AND FIND THE TIMESTAMP OF THE LATEST FETCH
 	*/
-	const startTimeStamp = 1661152000
-	//const fetchingTimestamp = Math.round(Date.now() / 1000)
-	const JSONObject = await makeinitialJSON(teamList, accessToken, startTimeStamp)
+	const latestUsedTimestamp = await findLatestTimestamp()
+
+	/*
+	USE THE TIMESTAMP AND FETCH DATA AFTER LAST FETCH
+	*/
+	const JSONObject = await makeJSON(teamList, accessToken, latestUsedTimestamp)
 
 	/*
 	FIGURE OUT WHICH WEEK IT IS
 	*/
-	//const currentWeek = getWeek(startTimeStamp, fetchingTimestamp)
+	const currentWeek = getWeek(startTimeStamp, latestUsedTimestamp)
+	console.log(currentWeek)
 	return JSONObject
-
 }
