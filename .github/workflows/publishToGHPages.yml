@@ -48,6 +48,7 @@ jobs:
           cp data-*.json ./public
           cd public
           git init
+          git pull
           git add data-*.json
           git commit -m "update JSON"
           git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
