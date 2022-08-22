@@ -2,7 +2,7 @@ import { StravaObject } from '../getStravaData.js'
 import { getInfoFromApi } from './getInfoFromApi.js'
 import { roundNumbers } from './roundNumbers.js'
 
-export const makeinitialJSON = async (
+export const makeJSON = async (
 	teamList: number[],
 	accessToken: string,
 	timeStamp: number,
