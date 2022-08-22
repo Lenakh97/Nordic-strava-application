@@ -50,7 +50,7 @@ jobs:
           cd public
           git init
           git branch
-          git pull origin HEAD:gh-pages
+          git pull remote HEAD:gh-pages
           git add data-*.json
           git commit -m "update JSON"
           git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
