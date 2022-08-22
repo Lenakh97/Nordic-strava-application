@@ -1,7 +1,7 @@
-import { fetchData } from './lib/fetchData.js'
-import { getWeek } from './lib/getWeek.js'
+//import { fetchData } from './lib/fetchData.js'
+//import { getWeek } from './lib/getWeek.js'
 import { makeinitialJSON } from './lib/makeInitialJSON.js'
-import { modifyJSON } from './lib/modifyJSON.js'
+//import { modifyJSON } from './lib/modifyJSON.js'
 import { postInfoToApi } from './lib/postInfoToApi.js'
 
 const teamList = [
@@ -29,37 +29,24 @@ export const getStravaData = async (): Promise<StravaObject> => {
 	*/
 	const CLIENT_ID = `${process.env.CLIENT_ID}`
 	const CLIENT_SECRET = `${process.env.CLIENT_SECRET}`
-	let REFRESH_TOKEN = `${process.env.REFRESH_TOKEN}`
+	const REFRESH_TOKEN = `${process.env.REFRESH_TOKEN}`
 	const res = await postInfoToApi(
 		`https://www.strava.com/api/v3/oauth/token?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&grant_type=refresh_token&refresh_token=${REFRESH_TOKEN}`,
 	)
-	REFRESH_TOKEN = res.data.refresh_token
+	//REFRESH_TOKEN = res.data.refresh_token
 	const accessToken: string = res.data.access_token
 
 	/*
 	FIRST OF ALL WE MIGHT HAVE NO DATA, MAKE INITIAL REQUEST
 	*/
 	const startTimeStamp = 1659304800
-	const fetchingTimestamp = Math.round(Date.now() / 1000)
-	await makeinitialJSON(teamList, accessToken, startTimeStamp)
+	//const fetchingTimestamp = Math.round(Date.now() / 1000)
+	const JSONObject = await makeinitialJSON(teamList, accessToken, startTimeStamp)
 
 	/*
 	FIGURE OUT WHICH WEEK IT IS
 	*/
-	const currentWeek = getWeek(startTimeStamp, fetchingTimestamp)
-	/*
-	FOR UPDATING WE NEED TO FETCH OLD DATA
-	*/
-	const fetchedData = await fetchData()
+	//const currentWeek = getWeek(startTimeStamp, fetchingTimestamp)
+	return JSONObject
 
-	/*
-	WE NOW HAVE THE OLD JSON DATA, AND NEEDS TO MODIFY IT TO ADD UPDATED DATA
-	*/
-	const modifiedJSON = await modifyJSON(
-		fetchedData,
-		currentWeek,
-		teamList,
-		accessToken,
-	)
-	return modifiedJSON
 }
