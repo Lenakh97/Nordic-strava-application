@@ -46,4 +46,4 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add data-*.json
           git commit -m "update JSON"
-          git push
+          git push origin HEAD:gh-pages
