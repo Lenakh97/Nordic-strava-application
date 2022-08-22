@@ -46,5 +46,4 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add data-*.json
           git commit -m "update JSON"
-          git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
           git push origin HEAD:gh-pages
