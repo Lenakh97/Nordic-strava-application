@@ -48,6 +48,7 @@ jobs:
           mkdir public
           cp data-*.json ./public
           cd public
+          echo ${GITHUB_REPOSITORY}
           git init
           git branch
           git pull remote HEAD:gh-pages
