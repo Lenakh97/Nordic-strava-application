@@ -1,5 +1,5 @@
-import { fetchFiles } from './fetchFiles'
-import { fetchTimeStamp } from './fetchTimestamp'
+import { fetchFiles } from './fetchFiles.js'
+import { fetchTimeStamp } from './fetchTimestamp.js'
 
 const getFilesUrl =
 	'https://api.github.com/repos/lenakh97/Nordic-strava-application/git/trees/gh-pages?recursive=1'
