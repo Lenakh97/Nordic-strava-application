@@ -25,7 +25,8 @@ export const makeJSON = async (
 		let clubElevation = 0
 		const memberCount = clubInfo.data.member_count
 		for (const activity in clubActivities.data) {
-			clubTotalHours += clubActivities.data[activity].elapsed_time / 60
+			//Time in hours
+			clubTotalHours += clubActivities.data[activity].elapsed_time / 60 / 60
 			clubElevation += clubActivities.data[activity].total_elevation_gain
 			if (clubActivities.data[activity].type === 'Ride') {
 				clubDistance += clubActivities.data[activity].distance / 3
@@ -34,6 +35,12 @@ export const makeJSON = async (
 			} else if (clubActivities.data[activity].type === 'EBikeRide') {
 				clubDistance += clubActivities.data[activity].distance / 3
 			} else if (clubActivities.data[activity].type === 'RollerSki') {
+				clubDistance += clubActivities.data[activity].distance / 3
+			} else if (clubActivities.data[activity].type === 'NordicSki') {
+				clubDistance += clubActivities.data[activity].distance / 3
+			} else if (clubActivities.data[activity].type === 'BackcountrySki') {
+				clubDistance += clubActivities.data[activity].distance / 3
+			} else if (clubActivities.data[activity].type === 'MountainBikeRide') {
 				clubDistance += clubActivities.data[activity].distance / 3
 			} else if (clubActivities.data[activity].type === 'Swim') {
 				clubDistance += clubActivities.data[activity].distance * 4
