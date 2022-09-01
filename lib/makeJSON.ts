@@ -27,26 +27,26 @@ export const makeJSON = async (
 		for (const activity in clubActivities.data) {
 			//Time in hours
 			clubTotalHours += clubActivities.data[activity].elapsed_time / 60 / 60
+			console.log(clubTotalHours)
 			clubElevation += clubActivities.data[activity].total_elevation_gain
-			if (clubActivities.data[activity].type === 'Ride') {
-				clubDistance += clubActivities.data[activity].distance / 3
-			} else if (clubActivities.data[activity].type === 'VirtualRide') {
-				clubDistance += clubActivities.data[activity].distance / 3
-			} else if (clubActivities.data[activity].type === 'EBikeRide') {
-				clubDistance += clubActivities.data[activity].distance / 3
-			} else if (clubActivities.data[activity].type === 'RollerSki') {
-				clubDistance += clubActivities.data[activity].distance / 3
-			} else if (clubActivities.data[activity].type === 'NordicSki') {
-				clubDistance += clubActivities.data[activity].distance / 3
-			} else if (clubActivities.data[activity].type === 'BackcountrySki') {
-				clubDistance += clubActivities.data[activity].distance / 3
-			} else if (clubActivities.data[activity].type === 'MountainBikeRide') {
-				clubDistance += clubActivities.data[activity].distance / 3
-			} else if (clubActivities.data[activity].type === 'Swim') {
+			const activityType = clubActivities.data[activity].type
+			const activities3 = [
+				'Ride',
+				'VirtualRide',
+				'EBikeRide',
+				'RollerSki',
+				'NordicSki',
+				'BackCountrySki',
+				'MountainBikeRide',
+			]
+
+			if (activities3.includes(activityType)) {
+				clubDistance += activityType / 3
+			} else if (activityType === 'Swim') {
 				clubDistance += clubActivities.data[activity].distance * 4
-			} else if (clubActivities.data[activity].type === 'Snowboard') {
+			} else if (activityType === 'Snowboard') {
 				clubDistance += 0
-			} else if (clubActivities.data[activity].type === 'AlpineSki') {
+			} else if (activityType === 'AlpineSki') {
 				clubDistance += 0
 			} else {
 				clubDistance += clubActivities.data[activity].distance
