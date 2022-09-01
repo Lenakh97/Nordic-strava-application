@@ -10,16 +10,15 @@ const teamList = [
 export type StravaObject = {
 	timestamp: number
 	totalData: { totalDistance: number; totalHours: number; totalPoints: number }
-	weekly_summary: {
-		weekNumber: number
-		updates: {
-			name: string
-			distance: number
-			hours: number
-			clubPoints: number
-			elevation: number
-		}[]
-	}[]
+	summary: clubDataObject[]
+}
+
+export type clubDataObject = {
+	name: string
+	distance: number
+	hours: number
+	clubPoints: number
+	elevation: number
 }
 
 export const getStravaData = async (): Promise<StravaObject> => {
