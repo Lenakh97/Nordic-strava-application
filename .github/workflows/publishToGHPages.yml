@@ -30,25 +30,33 @@ jobs:
 
       - name: Compile TypeScript
         run: npx tsc
+
+      - name: Clone data-files from gh-pages branch
+        run:
+          git clone https://github.com/Lenakh97/Nordic-strava-application
+          --branch gh-pages --depth 1 data
+
       - name: Update JSON
         run: node dist/fetch.js
 
+      - name: Summarize JSON
+        run: node dist/summarize.js
+
       - name: Check if data files were updated
+        working-directory: data
         run: |
-          if ! git diff --exit-code --name-only data-*.json; then
+          if ! git diff --exit-code; then
             echo "UPDATED=1" >> $GITHUB_ENV
           fi
 
       - name: Commit updated data files
+        working-directory: data
+        if: env.UPDATED == '1'
         run: |
           echo "machine github.com login accesskey password ${{ secrets.TOKEN }}" > ~/.netrc
           git config --global user.email "actions@example.com"
           git config --global user.name "GitHub Actions"
-          mkdir public
-          cp data-*.json ./public
-          cd public
-          git fetch
-          git add data-*.json
-          git checkout gh-pages
+          git add strava/data-*.json
+          git add summary-*.json
           git commit -m "update JSON"
-          git push origin HEAD:gh-pages
+          git push

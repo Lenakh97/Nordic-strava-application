@@ -17,8 +17,8 @@ export const summarizeData = async (): Promise<StravaObject> => {
 		const rawData = await readFile(path.join(folderPath, files))
 		const JSONdata = JSON.parse(rawData.toString())
 		totalClubDistance += JSONdata.totalData.totalDistance
-		totalClubHours += JSONdata.totalData.totalClubHours
-		totalClubPoints += JSONdata.totalData.totalClubPoints
+		totalClubHours += JSONdata.totalData.totalHours
+		totalClubPoints += JSONdata.totalData.totalPoints
 		for (const team of JSONdata.summary) {
 			if (clubDictionary[team.name] === undefined) {
 				clubDictionary[team.name] = {
