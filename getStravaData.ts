@@ -1,5 +1,6 @@
-import { findLatestTimestamp } from './lib/findLatestTimestamp.js'
-import { getWeek } from './lib/getWeek.js'
+import { startOfWeek } from 'date-fns'
+import { readdir, readFile } from 'fs/promises'
+import path from 'path'
 import { makeJSON } from './lib/makeJSON.js'
 import { postInfoToApi } from './lib/postInfoToApi.js'
 
@@ -33,22 +34,53 @@ export const getStravaData = async (): Promise<StravaObject> => {
 	)
 	const accessToken: string = res.data.access_token
 	//1.august 2022
-	const startTimeStamp = 1659346442
+	let startTimeStamp = undefined
 
 	/*
 	GOT THROUGH ALL FILES AND FIND THE TIMESTAMP OF THE LATEST FETCH
 	*/
-	const latestUsedTimestamp = await findLatestTimestamp()
+	const fileArray = await readdir('./data')
+	const latestWeekFolder: string | undefined = fileArray
+		.filter((folderName) => folderName.includes('week'))
+		.sort((folderA, folderB) => folderB.localeCompare(folderA))[0] as
+		| string
+		| undefined
+
+	console.log(`Latest week folder`, latestWeekFolder)
+	if (latestWeekFolder === undefined) {
+		startTimeStamp = startOfWeek(new Date()).getTime()
+	} else {
+		const weekDir = path.join(process.cwd(), 'data', latestWeekFolder)
+		const allFilesInFolder = await readdir(weekDir)
+		const latestJSONFile: string | undefined = allFilesInFolder
+			.filter((fileName) => fileName.includes('.json'))
+			.sort((fileA, fileB) => fileB.localeCompare(fileA))[0] as
+			| string
+			| undefined
+		if (latestJSONFile === undefined) {
+			startTimeStamp = startOfWeek(new Date()).getTime()
+		} else {
+			const JSONFilePath = path.join(weekDir, latestJSONFile)
+			console.log(`Latest week file`, JSONFilePath)
+			const rawData = await readFile(JSONFilePath)
+			const JSONdata = JSON.parse(rawData.toString())
+			if (JSONdata.timestamp === undefined) {
+				throw new Error(`No timestamp in JSON file: ${JSONFilePath}`)
+			}
+			startTimeStamp = JSONdata.timestamp
+		}
+	}
 
 	/*
 	USE THE TIMESTAMP AND FETCH DATA AFTER LAST FETCH
 	*/
-	const JSONObject = await makeJSON(teamList, accessToken, latestUsedTimestamp)
+	console.log(
+		`Timestamp used for fetching`,
+		startTimeStamp,
+		new Date(startTimeStamp * 1000),
+	)
 
-	/*
-	FIGURE OUT WHICH WEEK IT IS
-	*/
-	const currentWeek = getWeek(startTimeStamp, latestUsedTimestamp)
-	console.log(currentWeek)
+	const JSONObject = await makeJSON(teamList, accessToken, startTimeStamp)
+
 	return JSONObject
 }
