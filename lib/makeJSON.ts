@@ -26,7 +26,6 @@ export const makeJSON = async (
 		for (const activity in clubActivities.data) {
 			//Time in hours
 			clubTotalHours += clubActivities.data[activity].elapsed_time / 60 / 60
-			console.log(clubTotalHours)
 			clubElevation += clubActivities.data[activity].total_elevation_gain
 			const activityType = clubActivities.data[activity].type
 			const activities3 = [
