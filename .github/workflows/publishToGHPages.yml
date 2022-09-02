@@ -28,19 +28,16 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit
 
-      - name: Compile TypeScript
-        run: npx tsc
-
       - name: Clone data-files from gh-pages branch
         run:
           git clone https://github.com/Lenakh97/Nordic-strava-application
           --branch gh-pages --depth 1 data
 
       - name: Update JSON
-        run: node dist/fetch.js
+        run: npx tsx fetch.ts
 
       - name: Summarize JSON
-        run: node dist/summarize.js
+        run: npx tsx writeSummarizedData.ts
 
       - name: Check if data files were updated
         working-directory: data
@@ -56,7 +53,6 @@ jobs:
           echo "machine github.com login accesskey password ${{ secrets.TOKEN }}" > ~/.netrc
           git config --global user.email "actions@example.com"
           git config --global user.name "GitHub Actions"
-          git add strava/data-*.json
-          git add summary-*.json
+          git add -A
           git commit -m "update JSON"
           git push
