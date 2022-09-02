@@ -1,22 +1,25 @@
-import * as fs from 'fs'
+import { readFile } from 'fs/promises'
 import { readdir } from 'node:fs/promises'
+import path from 'path'
 import { clubDataObject, StravaObject } from '../getStravaData'
+import { weekNumber } from './getWeek'
 import { roundNumbers } from './roundNumbers.js'
 
-const summarizeData = async (): Promise<StravaObject> => {
-	const fileArray = await readdir('./data/public')
+export const summarizeData = async (): Promise<StravaObject> => {
+	const folderPath = path.join('data', `week-${weekNumber}`)
+	const fileArray = await readdir(folderPath)
 	const clubDictionary: { [name: string]: clubDataObject } = {}
 	let totalClubDistance = 0
 	let totalClubHours = 0
 	let totalClubPoints = 0
 	const weekly_summary: clubDataObject[] = []
 	for (const files of fileArray) {
-		const rawData = fs.readFileSync(`./data/public/${files}`)
+		const rawData = await readFile(path.join(folderPath, files))
 		const JSONdata = JSON.parse(rawData.toString())
 		totalClubDistance += JSONdata.totalData.totalDistance
 		totalClubHours += JSONdata.totalData.totalClubHours
 		totalClubPoints += JSONdata.totalData.totalClubPoints
-		for (const team of JSONdata.weekly_summary[0].updates) {
+		for (const team of JSONdata.summary) {
 			if (clubDictionary[team.name] === undefined) {
 				clubDictionary[team.name] = {
 					name: team.name,
@@ -45,8 +48,3 @@ const summarizeData = async (): Promise<StravaObject> => {
 		summary: weekly_summary,
 	}
 }
-
-const hei = summarizeData().then((res) => {
-	console.log(res)
-})
-console.log(hei)
