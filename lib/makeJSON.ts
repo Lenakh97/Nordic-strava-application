@@ -40,7 +40,7 @@ export const makeJSON = async (
 			]
 
 			if (activities3.includes(activityType)) {
-				clubDistance += activityType / 3
+				clubDistance += clubActivities.data[activity].distance / 3
 			} else if (activityType === 'Swim') {
 				clubDistance += clubActivities.data[activity].distance * 4
 			} else if (activityType === 'Snowboard') {
