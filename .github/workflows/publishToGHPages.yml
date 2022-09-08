@@ -39,20 +39,8 @@ jobs:
       - name: Summarize JSON
         run: npx tsx writeSummarizedData.ts
 
-      - name: Add new files
-        working-directory: data
-        run: git add -A
-
-      - name: Check if data files were updated
-        working-directory: data
-        run: |
-          if ! git diff --exit-code; then
-            echo "UPDATED=1" >> $GITHUB_ENV
-          fi
-
       - name: Commit updated data files
         working-directory: data
-        if: env.UPDATED == '1'
         run: |
           echo "machine github.com login accesskey password ${{ secrets.TOKEN }}" > ~/.netrc
           git config --global user.email "actions@example.com"
