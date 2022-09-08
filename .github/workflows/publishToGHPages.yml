@@ -39,6 +39,10 @@ jobs:
       - name: Summarize JSON
         run: npx tsx writeSummarizedData.ts
 
+      - name: Add new files
+        working-directory: data
+        run: git add -A
+
       - name: Check if data files were updated
         working-directory: data
         run: |
