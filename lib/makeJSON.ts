@@ -31,7 +31,6 @@ export const makeJSON = async (
 			const activities3 = [
 				'Ride',
 				'VirtualRide',
-				'EBikeRide',
 				'RollerSki',
 				'NordicSki',
 				'BackCountrySki',
@@ -41,6 +40,8 @@ export const makeJSON = async (
 			if (activities3.includes(activityType)) {
 				clubDistance += clubActivities.data[activity].distance / 3
 			} else if (activityType === 'Swim') {
+				clubDistance += clubActivities.data[activity].distance / 5
+			} else if (activityType === 'EBikeRide') {
 				clubDistance += clubActivities.data[activity].distance * 4
 			} else if (activityType === 'Snowboard') {
 				clubDistance += 0
