@@ -25,7 +25,7 @@ export const makeJSON = async (
 		const memberCount = clubInfo.data.member_count
 		for (const activity in clubActivities.data) {
 			//Time in hours
-			clubTotalHours += clubActivities.data[activity].elapsed_time / 60
+			clubTotalHours += clubActivities.data[activity].elapsed_time / 60 / 60
 			clubElevation += clubActivities.data[activity].total_elevation_gain
 			const activityType = clubActivities.data[activity].type
 			const activities3 = [
@@ -54,7 +54,7 @@ export const makeJSON = async (
 		JSONWeeklySummary.push({
 			name: clubInfo.data.name,
 			distance: roundNumbers(clubDistance / 1000),
-			hours: roundNumbers(clubTotalHours / memberCount),
+			hours: clubTotalHours / memberCount,
 			clubPoints: roundNumbers(clubPoints),
 			elevation: roundNumbers(clubElevation),
 		})
@@ -66,7 +66,7 @@ export const makeJSON = async (
 		timestamp: Math.round(Date.now() / 1000),
 		totalData: {
 			totalDistance: roundNumbers(totalClubDistance),
-			totalHours: roundNumbers(totalClubHours),
+			totalHours: totalClubHours,
 			totalPoints: roundNumbers(totalClubPoints),
 		},
 		summary: JSONWeeklySummary,
