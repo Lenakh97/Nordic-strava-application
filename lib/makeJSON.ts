@@ -59,7 +59,7 @@ export const makeJSON = async (
 			elevation: roundNumbers(clubElevation),
 		})
 		totalClubDistance += clubDistance / 1000
-		totalClubHours += clubTotalHours / memberCount
+		totalClubHours += clubTotalHours
 		totalClubPoints += clubPoints
 	}
 	return {
