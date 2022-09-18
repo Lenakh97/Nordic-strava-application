@@ -54,7 +54,7 @@ export const makeJSON = async (
 		JSONWeeklySummary.push({
 			name: clubInfo.data.name,
 			distance: roundNumbers(clubDistance / 1000),
-			hours: roundNumbers(clubTotalHours),
+			hours: roundNumbers(clubTotalHours / memberCount),
 			clubPoints: roundNumbers(clubPoints),
 			elevation: roundNumbers(clubElevation),
 		})
