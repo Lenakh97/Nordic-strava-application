@@ -21,7 +21,8 @@ export const makeJSON = async (
 		let clubTotalHours = 0
 		let clubPoints = 0
 		let clubElevation = 0
-		const memberCount = clubInfo.data.member_count
+		// Reduce 1 to account for "Strava Lena" account
+		const memberCount = clubInfo.data.member_count - 1
 		for (const activity in clubActivities.data) {
 			//Time in hours
 			clubTotalHours += clubActivities.data[activity].elapsed_time / 60 / 60
