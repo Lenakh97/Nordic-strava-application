@@ -1,6 +1,5 @@
 import { clubDataObject, StravaObject } from '../getStravaData.js'
 import { getInfoFromApi } from './getInfoFromApi.js'
-import { roundNumbers } from './roundNumbers.js'
 
 export const makeJSON = async (
 	teamList: number[],
@@ -54,10 +53,10 @@ export const makeJSON = async (
 		clubPoints += clubDistance / 1000 / memberCount
 		JSONWeeklySummary.push({
 			name: clubInfo.data.name,
-			distance: roundNumbers(clubDistance / 1000),
+			distance: clubDistance / 1000,
 			hours: clubTotalHours / memberCount,
-			clubPoints: roundNumbers(clubPoints),
-			elevation: roundNumbers(clubElevation),
+			clubPoints: clubPoints,
+			elevation: clubElevation,
 		})
 		totalClubDistance += clubDistance / 1000
 		totalClubHours += clubTotalHours
@@ -66,9 +65,9 @@ export const makeJSON = async (
 	return {
 		timestamp: Math.round(Date.now() / 1000),
 		totalData: {
-			totalDistance: roundNumbers(totalClubDistance),
+			totalDistance: totalClubDistance,
 			totalHours: totalClubHours,
-			totalPoints: roundNumbers(totalClubPoints),
+			totalPoints: totalClubPoints,
 		},
 		summary: JSONWeeklySummary,
 	}

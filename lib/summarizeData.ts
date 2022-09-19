@@ -3,7 +3,6 @@ import { readdir } from 'node:fs/promises'
 import path from 'path'
 import { clubDataObject, StravaObject } from '../getStravaData'
 import { weekNumber } from './getWeek'
-import { roundNumbers } from './roundNumbers.js'
 
 export const summarizeData = async (): Promise<StravaObject> => {
 	const folderPath = path.join('data', `week-${weekNumber}`)
@@ -41,9 +40,9 @@ export const summarizeData = async (): Promise<StravaObject> => {
 	return {
 		timestamp: Math.round(Date.now() / 1000),
 		totalData: {
-			totalDistance: roundNumbers(totalClubDistance),
-			totalHours: roundNumbers(totalClubHours),
-			totalPoints: roundNumbers(totalClubPoints),
+			totalDistance: totalClubDistance,
+			totalHours: totalClubHours,
+			totalPoints: totalClubPoints,
 		},
 		summary: weekly_summary,
 	}
