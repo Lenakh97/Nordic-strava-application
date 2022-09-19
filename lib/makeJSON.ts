@@ -38,11 +38,14 @@ export const makeJSON = async (
 			]
 
 			if (activities3.includes(activityType)) {
+				// Every 3 km of these activities count for 1 km of effective distance
 				clubDistance += clubActivities.data[activity].distance / 3
 			} else if (activityType === 'Swim') {
-				clubDistance += clubActivities.data[activity].distance / 5
-			} else if (activityType === 'EBikeRide') {
+				// Every 1 km of swim counts as 4 km of effective distance
 				clubDistance += clubActivities.data[activity].distance * 4
+			} else if (activityType === 'EBikeRide') {
+				// Every 5 km of EBikeRide counts as 1 km of effective distance
+				clubDistance += clubActivities.data[activity].distance / 5
 			} else if (activityType === 'Snowboard') {
 				clubDistance += 0
 			} else if (activityType === 'AlpineSki') {
