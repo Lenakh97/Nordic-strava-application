@@ -35,6 +35,7 @@ export const makeJSON = async (
 				'NordicSki',
 				'BackCountrySki',
 				'MountainBikeRide',
+				'GravelRide',
 			]
 
 			if (activities3.includes(activityType)) {
