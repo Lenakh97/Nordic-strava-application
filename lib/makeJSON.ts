@@ -21,7 +21,8 @@ export const makeJSON = async (
 		let clubTotalHours = 0
 		let clubPoints = 0
 		let clubElevation = 0
-		const memberCount = clubInfo.data.member_count
+		// Reduce 1 to account for "Strava Lena" account
+		const memberCount = clubInfo.data.member_count - 1
 		for (const activity in clubActivities.data) {
 			//Time in hours
 			clubTotalHours += clubActivities.data[activity].elapsed_time / 60 / 60
@@ -37,11 +38,14 @@ export const makeJSON = async (
 			]
 
 			if (activities3.includes(activityType)) {
+				// Every 3 km of these activities count for 1 km of effective distance
 				clubDistance += clubActivities.data[activity].distance / 3
 			} else if (activityType === 'Swim') {
-				clubDistance += clubActivities.data[activity].distance / 5
-			} else if (activityType === 'EBikeRide') {
+				// Every 1 km of swim counts as 4 km of effective distance
 				clubDistance += clubActivities.data[activity].distance * 4
+			} else if (activityType === 'EBikeRide') {
+				// Every 5 km of EBikeRide counts as 1 km of effective distance
+				clubDistance += clubActivities.data[activity].distance / 5
 			} else if (activityType === 'Snowboard') {
 				clubDistance += 0
 			} else if (activityType === 'AlpineSki') {
