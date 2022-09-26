@@ -16,25 +16,25 @@ export type Summary = {
 	summary: clubDataObject[]
 }
 
-export const summarizeStravaData = (
-	clubData: {
-		info: {
-			id: number
-			name: string
-			member_count: number
-		}
-		activities: {
-			/** In seconds */
-			elapsed_time: number
-			total_elevation_gain: number
-			type: string
-			/**
-			 * Distance in meters
-			 */
-			distance: number
-		}[]
-	}[],
-): Summary => {
+export type ClubData = {
+	info: {
+		id: number
+		name: string
+		member_count: number
+	}
+	activities: {
+		/** In seconds */
+		elapsed_time: number
+		total_elevation_gain: number
+		type: string
+		/**
+		 * Distance in meters
+		 */
+		distance: number
+	}[]
+}[]
+
+export const summarizeStravaData = (clubData: ClubData): Summary => {
 	const JSONWeeklySummary: clubDataObject[] = []
 	let totalClubDistance = 0
 	let totalClubHours = 0

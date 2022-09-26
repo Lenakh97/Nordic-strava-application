@@ -2,7 +2,11 @@ import { teamList } from './config.js'
 import { getStartTimeStamp } from './getStartTimeStamp'
 import { getAccessToken } from './lib/api/getAccessToken.js'
 import { getInfoFromApi } from './lib/getInfoFromApi.js'
-import { summarizeStravaData, Summary } from './lib/summarizeStravaData.js'
+import {
+	ClubData,
+	summarizeStravaData,
+	Summary,
+} from './lib/summarizeStravaData.js'
 
 export type clubDataObject = {
 	name: string
@@ -24,28 +28,13 @@ export const getStravaData = async ({
 	const startTimeStamp = await getStartTimeStamp({
 		dataFolder: './data',
 	})
-	/*
-	USE THE TIMESTAMP AND FETCH DATA AFTER LAST FETCH
-	*/
 	console.log(
 		`Timestamp used for fetching`,
 		startTimeStamp,
 		new Date(startTimeStamp * 1000),
 	)
 
-	const clubData: {
-		info: {
-			id: number
-			name: string
-			member_count: number
-		}
-		activities: {
-			elapsed_time: number
-			total_elevation_gain: number
-			type: string
-			distance: number
-		}[]
-	}[] = []
+	const clubData: ClubData = []
 
 	const accessToken = await getAccessToken({
 		clientId,
