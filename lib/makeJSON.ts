@@ -1,11 +1,16 @@
 import { clubDataObject, StravaObject } from '../getStravaData.js'
+import { getAccessToken } from './api/getAccessToken.js'
 import { getInfoFromApi } from './getInfoFromApi.js'
 
 export const makeJSON = async (
 	teamList: number[],
-	accessToken: string,
 	timeStamp: number,
+	getAccessTokenFn?: () => Promise<string>,
 ): Promise<StravaObject> => {
+	/*
+	INITIAL CODE - GET ACCESS TOKEN TO MAKE REQUESTS
+	*/
+	const accessToken: string = await (getAccessTokenFn ?? getAccessToken)()
 	const JSONWeeklySummary: clubDataObject[] = []
 	let totalClubDistance = 0
 	let totalClubHours = 0
