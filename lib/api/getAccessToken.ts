@@ -1,12 +1,16 @@
 import { postInfoToApi } from '../postInfoToApi'
 
-export const getAccessToken = async (): Promise<string> => {
-	const CLIENT_ID = `${process.env.CLIENT_ID}`
-	const CLIENT_SECRET = `${process.env.CLIENT_SECRET}`
-	const REFRESH_TOKEN = `${process.env.REFRESH_TOKEN}`
+export const getAccessToken = async ({
+	clientId,
+	clientSecret,
+	refreshToken,
+}: {
+	clientId: string
+	clientSecret: string
+	refreshToken: string
+}): Promise<string> => {
 	const res = await postInfoToApi(
-		`https://www.strava.com/api/v3/oauth/token?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&grant_type=refresh_token&refresh_token=${REFRESH_TOKEN}`,
+		`https://www.strava.com/api/v3/oauth/token?client_id=${clientId}&client_secret=${clientSecret}&grant_type=refresh_token&refresh_token=${refreshToken}`,
 	)
-	const accessToken: string = res.data.access_token
-	return accessToken
+	return res.data.access_token as string
 }

@@ -1,8 +1,16 @@
 import { getStravaData } from './getStravaData'
 
+const CLIENT_ID = '1234'
+const CLIENT_SECRET = 'mysecret'
+const REFRESH_TOKEN = 'refreshtoken'
+
 describe.skip('getStravaData()', () => {
 	it('should call the Strava API and return a summary', async () => {
-		const res = await getStravaData()
+		const res = await getStravaData({
+			clientId: CLIENT_ID,
+			clientSecret: CLIENT_SECRET,
+			refreshToken: REFRESH_TOKEN,
+		})
 
 		// Depends on the time of day (Date.now()),
 		// Timestamp property depends on previous of the function

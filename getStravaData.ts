@@ -12,7 +12,15 @@ export type clubDataObject = {
 	elevation: number
 }
 
-export const getStravaData = async (): Promise<Summary> => {
+export const getStravaData = async ({
+	clientId,
+	clientSecret,
+	refreshToken,
+}: {
+	clientId: string
+	clientSecret: string
+	refreshToken: string
+}): Promise<Summary> => {
 	const startTimeStamp = await getStartTimeStamp({
 		dataFolder: './data',
 	})
@@ -39,7 +47,11 @@ export const getStravaData = async (): Promise<Summary> => {
 		}[]
 	}[] = []
 
-	const accessToken = await getAccessToken()
+	const accessToken = await getAccessToken({
+		clientId,
+		clientSecret,
+		refreshToken,
+	})
 	for (const team of teamList) {
 		const clubInfo = await getInfoFromApi(
 			`https://www.strava.com/api/v3/clubs/${team}?access_token=${accessToken}`,
