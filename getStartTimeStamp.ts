@@ -10,10 +10,12 @@ export const getStartTimeStamp = async ({
 	dataFolder,
 	weekFolder,
 	now,
+	debug,
 }: {
 	dataFolder: string
 	weekFolder?: string
 	now?: Date
+	debug?: typeof console.log
 }): Promise<number> => {
 	if (weekFolder === undefined) {
 		const fileArray = await readdir(dataFolder)
@@ -23,7 +25,7 @@ export const getStartTimeStamp = async ({
 			| string
 			| undefined
 
-		console.log(`Latest week folder`, latestWeekFolder)
+		debug?.(`Latest week folder`, latestWeekFolder)
 		if (latestWeekFolder === undefined) {
 			// Start midnight today
 			return startOfDay(now ?? new Date()).getTime()
@@ -51,7 +53,7 @@ export const getStartTimeStamp = async ({
 	}
 
 	const JSONFilePath = path.join(dataFolder, weekFolder, latestJSONFile)
-	console.log(`Latest week file`, JSONFilePath)
+	debug?.(`Latest week file`, JSONFilePath)
 	const rawData = await readFile(JSONFilePath)
 	const JSONdata = JSON.parse(rawData.toString())
 	if (JSONdata.timestamp === undefined) {

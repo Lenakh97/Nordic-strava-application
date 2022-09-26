@@ -17,7 +17,9 @@ export type clubDataObject = {
 }
 
 export const getStravaData = async (): Promise<StravaObject> => {
-	const startTimeStamp = await getStartTimeStamp({ dataFolder: './data' })
+	const startTimeStamp = await getStartTimeStamp({
+		dataFolder: './data',
+	})
 	/*
 	USE THE TIMESTAMP AND FETCH DATA AFTER LAST FETCH
 	*/
