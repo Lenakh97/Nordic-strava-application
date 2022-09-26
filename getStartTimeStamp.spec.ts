@@ -2,8 +2,7 @@ import { startOfDay, startOfWeek } from 'date-fns'
 import * as path from 'path'
 import { getStartTimeStamp } from './getStartTimeStamp'
 
-// FIXME: Now is week 40 (actually 39)
-const now = new Date('2022-09-26T09:49:13.236Z')
+const now = new Date('2022-09-26T09:49:13.236Z') // was: 40 is now 39
 
 const dataFolder = (name: string) =>
 	path.join(process.cwd(), 'test-data', 'getStartTimeStamp', name)

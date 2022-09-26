@@ -6,7 +6,7 @@ summarizeData()
 	.then(
 		async (data) =>
 			await fs.writeFile(
-				`./data/summary-week-${weekNumber}.json`,
+				`./data/summary-week-${weekNumber()}.json`,
 				JSON.stringify(data, null, 2),
 				'utf-8',
 			),

@@ -5,7 +5,7 @@ import { clubDataObject, StravaObject } from '../getStravaData'
 import { weekNumber } from './getWeek'
 
 export const summarizeData = async (): Promise<StravaObject> => {
-	const folderPath = path.join('data', `week-${weekNumber}`)
+	const folderPath = path.join('data', `week-${weekNumber()}`)
 	const fileArray = await readdir(folderPath)
 	const clubDictionary: { [name: string]: clubDataObject } = {}
 	let totalClubDistance = 0

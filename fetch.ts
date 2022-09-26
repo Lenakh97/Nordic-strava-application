@@ -9,7 +9,7 @@ getStravaData()
 		const stravaDir = path.join(
 			process.cwd(),
 			'data',
-			`week-${weekNumber.toString().padStart(2, '0')}`,
+			`week-${weekNumber().toString().padStart(2, '0')}`,
 		)
 		try {
 			await mkdir(stravaDir)
