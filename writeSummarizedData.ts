@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs'
-import { weekNumber } from './lib/getWeek.js'
 import { summarizeData } from './lib/summarizeData.js'
+import { weekNumber } from './lib/weekNumber.js'
 
 summarizeData()
 	.then(

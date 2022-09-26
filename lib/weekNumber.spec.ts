@@ -1,4 +1,4 @@
-import { weekNumber } from './getWeek'
+import { weekNumber } from './weekNumber'
 
 describe('weekNumber', () => {
 	it('should give the current week', () => {

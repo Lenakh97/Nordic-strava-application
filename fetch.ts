@@ -3,7 +3,7 @@ import { promises as fs } from 'fs'
 import { mkdir } from 'fs/promises'
 import path from 'path'
 import { getStravaData } from './getStravaData.js'
-import { weekNumber } from './lib/getWeek.js'
+import { weekNumber } from './lib/weekNumber.js'
 
 const { clientId, clientSecret, refreshToken } = fromEnv({
 	clientId: 'CLIENT_ID',
