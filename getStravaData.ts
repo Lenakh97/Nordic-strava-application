@@ -1,12 +1,8 @@
 import { teamList } from './config.js'
 import { getStartTimeStamp } from './getStartTimeStamp'
-import { makeJSON } from './lib/makeJSON.js'
-
-export type StravaObject = {
-	timestamp: number
-	totalData: { totalDistance: number; totalHours: number; totalPoints: number }
-	summary: clubDataObject[]
-}
+import { getAccessToken } from './lib/api/getAccessToken.js'
+import { getInfoFromApi } from './lib/getInfoFromApi.js'
+import { summarizeStravaData, Summary } from './lib/summarizeStravaData.js'
 
 export type clubDataObject = {
 	name: string
@@ -16,7 +12,7 @@ export type clubDataObject = {
 	elevation: number
 }
 
-export const getStravaData = async (): Promise<StravaObject> => {
+export const getStravaData = async (): Promise<Summary> => {
 	const startTimeStamp = await getStartTimeStamp({
 		dataFolder: './data',
 	})
@@ -28,5 +24,34 @@ export const getStravaData = async (): Promise<StravaObject> => {
 		startTimeStamp,
 		new Date(startTimeStamp * 1000),
 	)
-	return makeJSON(teamList, startTimeStamp)
+
+	const clubData: {
+		info: {
+			id: number
+			name: string
+			member_count: number
+		}
+		activities: {
+			elapsed_time: number
+			total_elevation_gain: number
+			type: string
+			distance: number
+		}[]
+	}[] = []
+
+	const accessToken = await getAccessToken()
+	for (const team of teamList) {
+		const clubInfo = await getInfoFromApi(
+			`https://www.strava.com/api/v3/clubs/${team}?access_token=${accessToken}`,
+		)
+		const clubActivities = await getInfoFromApi(
+			`https://www.strava.com/api/v3/clubs/${team}/activities?access_token=${accessToken}&per_page=200&after=${startTimeStamp}`,
+		)
+		clubData.push({
+			activities: clubActivities.data as any,
+			info: clubInfo.data as any,
+		})
+	}
+
+	return summarizeStravaData(clubData)
 }

@@ -1,38 +1,56 @@
-import { clubDataObject, StravaObject } from '../getStravaData.js'
-import { getAccessToken } from './api/getAccessToken.js'
-import { getInfoFromApi } from './getInfoFromApi.js'
+import { clubDataObject } from '../getStravaData.js'
 
-export const makeJSON = async (
-	teamList: number[],
-	timeStamp: number,
-	getAccessTokenFn?: () => Promise<string>,
-): Promise<StravaObject> => {
-	/*
-	INITIAL CODE - GET ACCESS TOKEN TO MAKE REQUESTS
-	*/
-	const accessToken: string = await (getAccessTokenFn ?? getAccessToken)()
+export type Summary = {
+	/**
+	 * Unix timestamp in seconds of summary generation
+	 */
+	timestamp: number
+	totalData: {
+		/**
+		 * in kilometers
+		 */
+		totalDistance: number
+		totalHours: number
+		totalPoints: number
+	}
+	summary: clubDataObject[]
+}
+
+export const summarizeStravaData = (
+	clubData: {
+		info: {
+			id: number
+			name: string
+			member_count: number
+		}
+		activities: {
+			/** In seconds */
+			elapsed_time: number
+			total_elevation_gain: number
+			type: string
+			/**
+			 * Distance in meters
+			 */
+			distance: number
+		}[]
+	}[],
+): Summary => {
 	const JSONWeeklySummary: clubDataObject[] = []
 	let totalClubDistance = 0
 	let totalClubHours = 0
 	let totalClubPoints = 0
-	for (const team of teamList) {
-		const clubInfo = await getInfoFromApi(
-			`https://www.strava.com/api/v3/clubs/${team}?access_token=${accessToken}`,
-		)
-		const clubActivities = await getInfoFromApi(
-			`https://www.strava.com/api/v3/clubs/${team}/activities?access_token=${accessToken}&per_page=200&after=${timeStamp}`,
-		)
+	for (const { info: clubInfo, activities: clubActivities } of clubData) {
 		let clubDistance = 0
 		let clubTotalHours = 0
 		let clubPoints = 0
 		let clubElevation = 0
 		// Reduce 1 to account for "Strava Lena" account
-		const memberCount = clubInfo.data.member_count - 1
-		for (const activity in clubActivities.data) {
+		const memberCount = clubInfo.member_count - 1
+		for (const activity of clubActivities) {
 			//Time in hours
-			clubTotalHours += clubActivities.data[activity].elapsed_time / 60 / 60
-			clubElevation += clubActivities.data[activity].total_elevation_gain
-			const activityType = clubActivities.data[activity].type
+			clubTotalHours += activity.elapsed_time / 60 / 60
+			clubElevation += activity.total_elevation_gain
+			const activityType = activity.type
 			const activities3 = [
 				'Ride',
 				'VirtualRide',
@@ -45,24 +63,24 @@ export const makeJSON = async (
 
 			if (activities3.includes(activityType)) {
 				// Every 3 km of these activities count for 1 km of effective distance
-				clubDistance += clubActivities.data[activity].distance / 3
+				clubDistance += activity.distance / 3
 			} else if (activityType === 'Swim') {
 				// Every 1 km of swim counts as 4 km of effective distance
-				clubDistance += clubActivities.data[activity].distance * 4
+				clubDistance += activity.distance * 4
 			} else if (activityType === 'EBikeRide') {
 				// Every 5 km of EBikeRide counts as 1 km of effective distance
-				clubDistance += clubActivities.data[activity].distance / 5
+				clubDistance += activity.distance / 5
 			} else if (activityType === 'Snowboard') {
 				clubDistance += 0
 			} else if (activityType === 'AlpineSki') {
 				clubDistance += 0
 			} else {
-				clubDistance += clubActivities.data[activity].distance
+				clubDistance += activity.distance
 			}
 		}
 		clubPoints += clubDistance / 1000 / memberCount
 		JSONWeeklySummary.push({
-			name: clubInfo.data.name,
+			name: clubInfo.name,
 			distance: clubDistance / 1000,
 			hours: clubTotalHours / memberCount,
 			clubPoints: clubPoints,
