@@ -1,8 +1,11 @@
 import { promises as fs } from 'fs'
+import * as path from 'path'
 import { summarizeData } from './lib/summarizeData.js'
 import { weekNumber } from './lib/weekNumber.js'
 
-summarizeData()
+summarizeData({
+	folderPath: path.join('data', `week-${weekNumber()}`),
+})
 	.then(
 		async (data) =>
 			await fs.writeFile(

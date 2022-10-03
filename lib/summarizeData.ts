@@ -3,10 +3,12 @@ import { readdir } from 'node:fs/promises'
 import path from 'path'
 import { clubDataObject } from '../getStravaData'
 import { Summary } from './summarizeStravaData'
-import { weekNumber } from './weekNumber'
 
-export const summarizeData = async (): Promise<Summary> => {
-	const folderPath = path.join('data', `week-${weekNumber()}`)
+export const summarizeData = async ({
+	folderPath,
+}: {
+	folderPath: string
+}): Promise<Summary> => {
 	const fileArray = await readdir(folderPath)
 	const clubDictionary: { [name: string]: clubDataObject } = {}
 	let totalClubDistance = 0
