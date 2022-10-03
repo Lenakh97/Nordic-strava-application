@@ -49,6 +49,8 @@ export const getStartTimeStamp = async ({
 		return getStartTimeStamp({
 			dataFolder,
 			weekFolder: getPreviousFolderName(weekFolder),
+			now,
+			debug,
 		})
 	}
 
