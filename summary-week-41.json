@@ -1,17 +1,17 @@
 {
-  "timestamp": 1665142039,
+  "timestamp": 1665147603,
   "totalData": {
-    "totalDistance": 2107.3215266666666,
-    "totalHours": 419.93972222222214,
-    "totalPoints": 26.531532267298967
+    "totalDistance": 2149.88326,
+    "totalHours": 429.64833333333326,
+    "totalPoints": 27.036605675811458
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 485.49936666666673,
-      "hours": 1.2931674382716052,
-      "clubPoints": 6.74304675925926,
-      "elevation": 5243.199999999999
+      "distance": 508.88200000000006,
+      "hours": 1.369826388888889,
+      "clubPoints": 7.067805555555556,
+      "elevation": 5489.199999999999
     },
     {
       "name": "Nordic Semiconductor - Poland",
@@ -29,10 +29,10 @@
     },
     {
       "name": "Nordic Semiconductor - APAC",
-      "distance": 204.2628666666667,
-      "hours": 0.5398616544948707,
-      "clubPoints": 2.873037617370892,
-      "elevation": 3604.099999999999
+      "distance": 205.9717666666667,
+      "hours": 0.5539974569640065,
+      "clubPoints": 2.896772339593114,
+      "elevation": 3610.199999999999
     },
     {
       "name": "Nordic Semiconductor - USA",
@@ -43,10 +43,10 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 305.35446666666667,
-      "hours": 0.6768153648664731,
-      "clubPoints": 1.8236471100771747,
-      "elevation": 5561.099999999999
+      "distance": 314.98216666666667,
+      "hours": 0.6821543198929281,
+      "clubPoints": 1.8809548481724128,
+      "elevation": 5679.099999999999
     },
     {
       "name": "Omega NTNU",
@@ -57,10 +57,10 @@
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 257.58699333333334,
-      "hours": 0.7244018547819971,
-      "clubPoints": 3.2280660316455694,
-      "elevation": 4640.7
+      "distance": 265.4294933333333,
+      "hours": 0.7531922907876231,
+      "clubPoints": 3.3273381835443034,
+      "elevation": 5034.7
     }
   ]
 }
