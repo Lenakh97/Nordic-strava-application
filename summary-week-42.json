@@ -1,17 +1,17 @@
 {
-  "timestamp": 1665666218,
+  "timestamp": 1665669705,
   "totalData": {
-    "totalDistance": 1701.44498,
-    "totalHours": 276.23166666666674,
-    "totalPoints": 22.271587471049404
+    "totalDistance": 1739.6205466666665,
+    "totalHours": 281.0833333333334,
+    "totalPoints": 22.552759049477444
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 350.2311666666666,
-      "hours": 0.950486111111111,
-      "clubPoints": 4.864321759259259,
-      "elevation": 3053.8999999999996
+      "distance": 355.88773333333324,
+      "hours": 0.9694251543209875,
+      "clubPoints": 4.942885185185185,
+      "elevation": 3151.2
     },
     {
       "name": "Nordic Semiconductor - Poland",
@@ -22,10 +22,10 @@
     },
     {
       "name": "Nordic Semiconductor - Europe",
-      "distance": 72.71686666666668,
-      "hours": 0.2501199494949495,
-      "clubPoints": 1.6526560606060605,
-      "elevation": 879
+      "distance": 74.67486666666667,
+      "hours": 0.2577356902356902,
+      "clubPoints": 1.693447727272727,
+      "elevation": 916
     },
     {
       "name": "Nordic Semiconductor - APAC",
@@ -43,24 +43,24 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 256.61379999999997,
-      "hours": 0.22015841708149403,
-      "clubPoints": 1.5245147201089508,
-      "elevation": 4231.4
+      "distance": 275.27709999999996,
+      "hours": 0.23075506402429483,
+      "clubPoints": 1.6349484479196017,
+      "elevation": 4318.4
     },
     {
       "name": "Omega NTNU",
-      "distance": 529.4785999999999,
-      "hours": 0.1884545242622116,
-      "clubPoints": 1.808163114217588,
-      "elevation": 5639.700000000001
+      "distance": 540.2106999999999,
+      "hours": 0.1922087904738157,
+      "clubPoints": 1.8447914418626392,
+      "elevation": 5877.700000000001
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 120.04591333333332,
-      "hours": 0.3557348804500704,
-      "clubPoints": 1.5195685232067513,
-      "elevation": 2464.2000000000003
+      "distance": 121.21151333333331,
+      "hours": 0.3586673699015472,
+      "clubPoints": 1.5343229535864982,
+      "elevation": 2498.7000000000003
     }
   ]
 }
