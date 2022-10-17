@@ -8,7 +8,7 @@ import {
 	Summary,
 } from './lib/summarizeStravaData.js'
 
-export type clubDataObject = {
+export type ClubInfo = {
 	name: string
 	distance: number
 	hours: number

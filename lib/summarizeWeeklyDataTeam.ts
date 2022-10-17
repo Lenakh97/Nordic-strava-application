@@ -1,25 +1,25 @@
-import { clubDataObject } from '../getStravaData'
+import { ClubInfo } from '../getStravaData'
 import { Summary } from './summarizeStravaData'
 
 export const summarizeWeeklyDataTeam = ({
-	JSONdataArray,
+	summaries,
 }: {
-	JSONdataArray: Summary[]
+	summaries: Summary[]
 }): Summary => {
-	const clubDictionary: { [name: string]: clubDataObject } = {}
-	const weekly_summary: clubDataObject[] = []
+	const clubsInfo: Record<string, ClubInfo> = {}
+	const weeklySummary: ClubInfo[] = []
 
 	let totalClubDistance = 0
 	let totalClubHours = 0
 	let totalClubPoints = 0
-	for (const JSONdata of JSONdataArray) {
-		totalClubDistance += JSONdata.totalData.totalDistance
-		totalClubHours += JSONdata.totalData.totalHours
-		totalClubPoints += JSONdata.totalData.totalPoints
+	for (const summary of summaries) {
+		totalClubDistance += summary.totalData.totalDistance
+		totalClubHours += summary.totalData.totalHours
+		totalClubPoints += summary.totalData.totalPoints
 
-		for (const team of JSONdata.summary) {
-			if (clubDictionary[team.name] === undefined) {
-				clubDictionary[team.name] = {
+		for (const team of summary.summary) {
+			if (clubsInfo[team.name] === undefined) {
+				clubsInfo[team.name] = {
 					name: team.name,
 					distance: 0,
 					hours: 0,
@@ -27,14 +27,14 @@ export const summarizeWeeklyDataTeam = ({
 					elevation: 0,
 				}
 			}
-			clubDictionary[team.name].distance += team.distance
-			clubDictionary[team.name].hours += team.hours
-			clubDictionary[team.name].clubPoints += team.clubPoints
-			clubDictionary[team.name].elevation += team.elevation
+			clubsInfo[team.name].distance += team.distance
+			clubsInfo[team.name].hours += team.hours
+			clubsInfo[team.name].clubPoints += team.clubPoints
+			clubsInfo[team.name].elevation += team.elevation
 		}
 	}
-	for (const teamName in clubDictionary) {
-		weekly_summary.push(clubDictionary[teamName])
+	for (const teamName in clubsInfo) {
+		weeklySummary.push(clubsInfo[teamName])
 	}
 	return {
 		timestamp: Math.round(Date.now() / 1000),
@@ -43,6 +43,6 @@ export const summarizeWeeklyDataTeam = ({
 			totalHours: totalClubHours,
 			totalPoints: totalClubPoints,
 		},
-		summary: weekly_summary,
+		summary: weeklySummary,
 	}
 }

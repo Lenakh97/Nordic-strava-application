@@ -1,4 +1,4 @@
-import { clubDataObject } from '../getStravaData.js'
+import { ClubInfo } from '../getStravaData.js'
 
 export type Summary = {
 	/**
@@ -13,7 +13,7 @@ export type Summary = {
 		totalHours: number
 		totalPoints: number
 	}
-	summary: clubDataObject[]
+	summary: ClubInfo[]
 }
 
 export type ClubData = {
@@ -35,7 +35,7 @@ export type ClubData = {
 }[]
 
 export const summarizeStravaData = (clubData: ClubData): Summary => {
-	const JSONWeeklySummary: clubDataObject[] = []
+	const JSONWeeklySummary: ClubInfo[] = []
 	let totalClubDistance = 0
 	let totalClubHours = 0
 	let totalClubPoints = 0
