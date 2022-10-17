@@ -1,9 +1,9 @@
 import { promises as fs } from 'fs'
 import * as path from 'path'
-import { summarizeData } from './lib/summarizeData.js'
+import { getSummaryFromFolder } from './lib/getSummaryFromFolder.js'
 import { weekNumber } from './lib/weekNumber.js'
 
-summarizeData({
+getSummaryFromFolder({
 	folderPath: path.join('data', `week-${weekNumber()}`),
 })
 	.then(

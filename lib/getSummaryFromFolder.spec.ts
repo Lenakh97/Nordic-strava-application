@@ -1,16 +1,20 @@
 import * as path from 'path'
-import { summarizeData } from './summarizeData'
+import { getSummaryFromFolder } from './getSummaryFromFolder'
+import { readFileFromFolder } from './readFileFromFolder'
+import { summarizeWeeklyDataTeam } from './summarizeWeeklyDataTeam'
 
-describe('summarizeData()', () => {
+describe('getSummaryFromFolder()', () => {
 	it('should summarize all club data', async () => {
-		const summary = await summarizeData({
+		const JSONdataArray = await readFileFromFolder({
 			folderPath: path.join(
 				process.cwd(),
 				'test-data',
-				'summarizeData',
+				'getSummaryFromFolder',
 				'withData',
 			),
 		})
+
+		const summary = summarizeWeeklyDataTeam({ JSONdataArray })
 
 		expect(summary).toMatchObject({
 			totalData: {
@@ -81,11 +85,11 @@ describe('summarizeData()', () => {
 		expect(summary.timestamp).toBeLessThanOrEqual(Math.ceil(Date.now() / 1000))
 	})
 	it('should summarize no data', async () => {
-		const summary = await summarizeData({
+		const summary = await getSummaryFromFolder({
 			folderPath: path.join(
 				process.cwd(),
 				'test-data',
-				'summarizeData',
+				'getSummaryFromFolder',
 				'noData',
 			),
 		})
