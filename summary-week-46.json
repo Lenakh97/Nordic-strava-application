@@ -1,24 +1,24 @@
 {
-  "timestamp": 1668266732,
+  "timestamp": 1668270788,
   "totalData": {
-    "totalDistance": 2300.438766666667,
-    "totalHours": 808.0916666666666,
-    "totalPoints": 28.51598824973545
+    "totalDistance": 2357.2369000000003,
+    "totalHours": 821.8,
+    "totalPoints": 29.4134164235305
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
       "distance": 320.2372000000001,
-      "hours": 0.843090277777778,
+      "hours": 0.860277777777778,
       "clubPoints": 4.447738888888888,
       "elevation": 4545.5
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 234.75113333333334,
-      "hours": 1.356815476190476,
-      "clubPoints": 8.383969047619047,
-      "elevation": 3836.7999999999997
+      "distance": 253.04706666666667,
+      "hours": 1.5897023809523807,
+      "clubPoints": 9.037395238095238,
+      "elevation": 5029.2
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -43,24 +43,24 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 363.48656666666665,
-      "hours": 0.3829992168465021,
-      "clubPoints": 2.1411172258962754,
-      "elevation": 6016.3
+      "distance": 385.8152666666666,
+      "hours": 0.39768385736937795,
+      "clubPoints": 2.2724625200139226,
+      "elevation": 6351.5
     },
     {
       "name": "Omega NTNU",
-      "distance": 917.4818,
-      "hours": 0.33917808219178086,
-      "clubPoints": 3.1420609589041106,
-      "elevation": 10233
+      "distance": 927.6664000000001,
+      "hours": 0.3453034627092847,
+      "clubPoints": 3.176939726027398,
+      "elevation": 10712
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 149.29323333333332,
-      "hours": 0.44762987012987016,
-      "clubPoints": 1.93887316017316,
-      "elevation": 2857.4000000000005
+      "distance": 155.28213333333332,
+      "hours": 0.46925324675324676,
+      "clubPoints": 2.016651082251082,
+      "elevation": 2938.3000000000006
     }
   ]
 }
