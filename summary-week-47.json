@@ -1,17 +1,17 @@
 {
-  "timestamp": 1668789156,
+  "timestamp": 1668792145,
   "totalData": {
-    "totalDistance": 1630.5711000000003,
-    "totalHours": 273.74527777777774,
-    "totalPoints": 19.253840328700164
+    "totalDistance": 1736.553166666667,
+    "totalHours": 286.6580555555555,
+    "totalPoints": 20.37173765276308
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 174.05429999999998,
-      "hours": 0.48792438271604943,
-      "clubPoints": 2.4174208333333334,
-      "elevation": 1868.0999999999997
+      "distance": 184.19823333333332,
+      "hours": 0.5298996913580247,
+      "clubPoints": 2.5583087962962963,
+      "elevation": 2028.0999999999997
     },
     {
       "name": "Nordic Semiconductor - Poland",
@@ -22,10 +22,10 @@
     },
     {
       "name": "Nordic Semiconductor - Europe",
-      "distance": 141.775,
-      "hours": 0.6725115740740741,
-      "clubPoints": 2.9536458333333337,
-      "elevation": 1505.4
+      "distance": 147.478,
+      "hours": 0.6884664351851852,
+      "clubPoints": 3.072458333333334,
+      "elevation": 1637.4
     },
     {
       "name": "Nordic Semiconductor - APAC",
@@ -36,10 +36,10 @@
     },
     {
       "name": "Nordic Semiconductor - USA",
-      "distance": 27.759333333333334,
-      "hours": 0.31969576719576714,
-      "clubPoints": 1.3218730158730159,
-      "elevation": 304.7
+      "distance": 37.84446666666667,
+      "hours": 0.3673280423280423,
+      "clubPoints": 1.8021174603174603,
+      "elevation": 371.7
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
@@ -50,16 +50,16 @@
     },
     {
       "name": "Omega NTNU",
-      "distance": 636.2821999999998,
-      "hours": 0.22947406858206879,
-      "clubPoints": 2.1846389551852377,
-      "elevation": 7314.700000000001
+      "distance": 705.5614999999998,
+      "hours": 0.2541504717893998,
+      "clubPoints": 2.422712151061526,
+      "elevation": 7990.200000000001
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 121.81106666666669,
-      "hours": 0.29543650793650783,
-      "clubPoints": 1.5819619047619047,
+      "distance": 132.58176666666668,
+      "hours": 0.30769119769119757,
+      "clubPoints": 1.7218411255411255,
       "elevation": 2366.2000000000003
     }
   ]
