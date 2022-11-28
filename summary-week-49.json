@@ -1,24 +1,24 @@
 {
-  "timestamp": 1669648815,
+  "timestamp": 1669652793,
   "totalData": {
-    "totalDistance": 103.79853333333335,
-    "totalHours": 15.713333333333333,
-    "totalPoints": 1.053936512316053
+    "totalDistance": 167.07180000000002,
+    "totalHours": 22.39472222222222,
+    "totalPoints": 2.414954979312546
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 28.83056666666667,
-      "hours": 0.06594907407407408,
-      "clubPoints": 0.400424537037037,
-      "elevation": 454.4
+      "distance": 48.092400000000005,
+      "hours": 0.09010030864197531,
+      "clubPoints": 0.66795,
+      "elevation": 500.4
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 6.2593,
-      "hours": 0.0417911877394636,
-      "clubPoints": 0.21583793103448273,
-      "elevation": 112
+      "distance": 18.031633333333332,
+      "hours": 0.0942624521072797,
+      "clubPoints": 0.6217804597701149,
+      "elevation": 267
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -36,10 +36,10 @@
     },
     {
       "name": "Nordic Semiconductor - USA",
-      "distance": 0,
-      "hours": 0,
-      "clubPoints": 0,
-      "elevation": 0
+      "distance": 11.7616,
+      "hours": 0.04863756613756614,
+      "clubPoints": 0.5600761904761905,
+      "elevation": 75.7
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
@@ -50,16 +50,16 @@
     },
     {
       "name": "Omega NTNU",
-      "distance": 52.463,
-      "hours": 0.01787037037037037,
-      "clubPoints": 0.1802852233676976,
-      "elevation": 511.2
+      "distance": 66.9613,
+      "hours": 0.0239356624665903,
+      "clubPoints": 0.23010756013745703,
+      "elevation": 643.2
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 6.830733333333334,
-      "hours": 0.02977272727272727,
-      "clubPoints": 0.08871082251082252,
+      "distance": 12.809933333333333,
+      "hours": 0.03801226551226551,
+      "clubPoints": 0.16636277056277055,
       "elevation": 301
     }
   ]
