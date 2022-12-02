@@ -1,24 +1,24 @@
 {
-  "timestamp": 1669962374,
+  "timestamp": 1669965508,
   "totalData": {
-    "totalDistance": 1354.3561999999997,
-    "totalHours": 198.82944444444445,
-    "totalPoints": 16.03028890902392
+    "totalDistance": 1389.5892333333331,
+    "totalHours": 205.88055555555556,
+    "totalPoints": 16.240795431751035
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 190.5849,
-      "hours": 0.5214274691358024,
-      "clubPoints": 2.6470125,
+      "distance": 191.7117,
+      "hours": 0.5336921296296295,
+      "clubPoints": 2.6626625,
       "elevation": 1750.5000000000002
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 119.58976666666665,
-      "hours": 0.5762260536398468,
-      "clubPoints": 4.123785057471264,
-      "elevation": 1328
+      "distance": 121.93939999999998,
+      "hours": 0.5893199233716475,
+      "clubPoints": 4.204806896551724,
+      "elevation": 1359
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -43,22 +43,22 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 156.53636666666665,
-      "hours": 0.14162254901960789,
-      "clubPoints": 0.9208021568627454,
-      "elevation": 1870.2000000000003
+      "distance": 158.46016666666665,
+      "hours": 0.15200653594771246,
+      "clubPoints": 0.9321186274509806,
+      "elevation": 1910.4000000000003
     },
     {
       "name": "Omega NTNU",
-      "distance": 573.0632999999999,
-      "hours": 0.2341533027873234,
-      "clubPoints": 1.969289690721649,
-      "elevation": 6269.200000000001
+      "distance": 602.8960999999999,
+      "hours": 0.2439442535318824,
+      "clubPoints": 2.0718079037800683,
+      "elevation": 6375.000000000001
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
       "distance": 126.64299999999999,
-      "hours": 0.26513347763347767,
+      "hours": 0.2803787878787879,
       "clubPoints": 1.6447142857142858,
       "elevation": 2605.7
     }
