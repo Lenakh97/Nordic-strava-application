@@ -1,38 +1,38 @@
 {
-  "timestamp": 1670246837,
+  "timestamp": 1670249944,
   "totalData": {
-    "totalDistance": 78.78679999999999,
-    "totalHours": 15.346111111111112,
-    "totalPoints": 0.7231720807009242
+    "totalDistance": 132.8002,
+    "totalHours": 26.5075,
+    "totalPoints": 1.754785597998648
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 12.631933333333333,
-      "hours": 0.04162037037037038,
-      "clubPoints": 0.1754435185185185,
-      "elevation": 97.5
+      "distance": 14.681033333333332,
+      "hours": 0.04739583333333334,
+      "clubPoints": 0.20390324074074073,
+      "elevation": 104.5
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 3.628,
-      "hours": 0.018764367816091955,
-      "clubPoints": 0.12510344827586206,
-      "elevation": 59
+      "distance": 21.4362,
+      "hours": 0.16856321839080457,
+      "clubPoints": 0.7391793103448275,
+      "elevation": 669.4
     },
     {
       "name": "Nordic Semiconductor - Europe",
-      "distance": 0,
-      "hours": 0,
-      "clubPoints": 0,
-      "elevation": 0
+      "distance": 7.9511,
+      "hours": 0.06396412037037037,
+      "clubPoints": 0.16564791666666667,
+      "elevation": 587.4
     },
     {
       "name": "Nordic Semiconductor - APAC",
-      "distance": 0.8833,
-      "hours": 0.009185956790123458,
-      "clubPoints": 0.012268055555555555,
-      "elevation": 21.9
+      "distance": 9.536600000000002,
+      "hours": 0.028730709876543213,
+      "clubPoints": 0.1324527777777778,
+      "elevation": 281.79999999999995
     },
     {
       "name": "Nordic Semiconductor - USA",
@@ -43,10 +43,10 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 20.637966666666667,
-      "hours": 0.022383986928104574,
-      "clubPoints": 0.12139980392156864,
-      "elevation": 376.9
+      "distance": 38.18966666666667,
+      "hours": 0.03370098039215686,
+      "clubPoints": 0.22464509803921567,
+      "elevation": 428.9
     },
     {
       "name": "Omega NTNU",
