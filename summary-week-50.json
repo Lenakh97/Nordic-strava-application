@@ -1,24 +1,24 @@
 {
-  "timestamp": 1670567111,
+  "timestamp": 1670570293,
   "totalData": {
-    "totalDistance": 1120.3358000000003,
-    "totalHours": 200.12694444444446,
-    "totalPoints": 14.162246413152992
+    "totalDistance": 1145.4494000000002,
+    "totalHours": 205.87500000000003,
+    "totalPoints": 14.452728999177882
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 177.5058,
-      "hours": 0.6076118827160495,
-      "clubPoints": 2.4653583333333335,
-      "elevation": 2183.3
+      "distance": 185.28353333333334,
+      "hours": 0.6390084876543211,
+      "clubPoints": 2.5733824074074074,
+      "elevation": 2281.6000000000004
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 115.08686666666665,
-      "hours": 0.8877394636015324,
-      "clubPoints": 3.9685126436781606,
-      "elevation": 2082
+      "distance": 118.76223333333331,
+      "hours": 0.9073850574712642,
+      "clubPoints": 4.095249425287356,
+      "elevation": 2133
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -43,22 +43,22 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 185.63060000000002,
-      "hours": 0.21494934640522873,
-      "clubPoints": 1.0919447058823528,
-      "elevation": 2744.8
+      "distance": 189.2196,
+      "hours": 0.21769281045751632,
+      "clubPoints": 1.113056470588235,
+      "elevation": 2837.8
     },
     {
       "name": "Omega NTNU",
-      "distance": 423.1841999999999,
-      "hours": 0.15849560901107293,
-      "clubPoints": 1.454241237113402,
-      "elevation": 4364.2
+      "distance": 433.25569999999993,
+      "hours": 0.162053264604811,
+      "clubPoints": 1.4888512027491407,
+      "elevation": 4554.8
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
       "distance": 49.67023333333333,
-      "hours": 0.17115079365079364,
+      "hours": 0.18954184704184704,
       "clubPoints": 0.6450679653679654,
       "elevation": 344.6
     }
