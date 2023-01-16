@@ -2,15 +2,15 @@ import { promises as fs } from 'fs'
 import * as path from 'path'
 import { collectJSONFilesFromFolder } from './lib/collectJSONFilesFromFolder.js'
 import { summarizeWeeklyDataTeam } from './lib/summarizeWeeklyDataTeam.js'
-import { weekNumber } from './lib/weekNumber.js'
+import { weekFolderName } from './lib/weekFolderName.js'
 
 collectJSONFilesFromFolder({
-	folderPath: path.join('data', `week-${weekNumber()}`),
+	folderPath: path.join('data', `${weekFolderName()}`),
 })
 	.then(async (data) => {
 		const weekly_summary = summarizeWeeklyDataTeam({ summaries: data })
 		await fs.writeFile(
-			`./data/summary-week-${weekNumber()}.json`,
+			`./data/summary-${weekFolderName()}.json`,
 			JSON.stringify(weekly_summary, null, 2),
 			'utf-8',
 		)
