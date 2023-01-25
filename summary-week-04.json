@@ -1,17 +1,17 @@
 {
-  "timestamp": 1674627863,
+  "timestamp": 1674631339,
   "totalData": {
-    "totalDistance": 102811.79543333335,
-    "totalHours": 21411.120555555553,
-    "totalPoints": 1969.4228243472369
+    "totalDistance": 102823.92546666668,
+    "totalHours": 21414.54111111111,
+    "totalPoints": 1969.6323637475807
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 15685.681533333325,
-      "hours": 58.55405891366717,
-      "clubPoints": 219.5419794926969,
-      "elevation": 578765.9000000001
+      "distance": 15690.218233333326,
+      "hours": 58.5690315271257,
+      "clubPoints": 219.60587667579549,
+      "elevation": 578839.9000000001
     },
     {
       "name": "Nordic Semiconductor - Poland",
@@ -22,15 +22,15 @@
     },
     {
       "name": "Nordic Semiconductor - Europe",
-      "distance": 18076.256799999996,
-      "hours": 62.78171480988969,
-      "clubPoints": 381.1219712913713,
-      "elevation": 258373.9999999999
+      "distance": 18081.889466666664,
+      "hours": 62.799102516745485,
+      "clubPoints": 381.24181526300254,
+      "elevation": 258492.9999999999
     },
     {
       "name": "Nordic Semiconductor - APAC",
       "distance": 9129.0298,
-      "hours": 24.37374902190924,
+      "hours": 24.375806924882635,
       "clubPoints": 127.8344683881064,
       "elevation": 113084.59999999998
     },
@@ -44,7 +44,7 @@
     {
       "name": "Nordic Semiconductor - Trondheim Office",
       "distance": 11526.6229,
-      "hours": 16.80049540743319,
+      "hours": 16.8068004698921,
       "clubPoints": 67.9955055586495,
       "elevation": 262031.89999999994
     },
@@ -57,10 +57,10 @@
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 13232.82516666667,
-      "hours": 46.858780806182104,
-      "clubPoints": 172.9542376167693,
-      "elevation": 252663.4
+      "distance": 13234.785833333335,
+      "hours": 46.86310463659146,
+      "clubPoints": 172.98003586238332,
+      "elevation": 252698.4
     }
   ]
 }
