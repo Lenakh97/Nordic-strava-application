@@ -1,9 +1,9 @@
 {
-  "timestamp": 1675074165,
+  "timestamp": 1675077407,
   "totalData": {
-    "totalDistance": 124.272,
-    "totalHours": 21.07,
-    "totalPoints": 1.320163646069051
+    "totalDistance": 130.49516666666668,
+    "totalHours": 22.994722222222222,
+    "totalPoints": 1.3569871174694454
   },
   "summary": [
     {
@@ -37,15 +37,15 @@
     {
       "name": "Nordic Semiconductor - USA",
       "distance": 0,
-      "hours": 0.2795555555555555,
+      "hours": 0.3258194444444444,
       "clubPoints": 0,
       "elevation": 3560.1
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 5.745900000000001,
-      "hours": 0.004824128862590401,
-      "clubPoints": 0.033999408284023674,
+      "distance": 11.969066666666667,
+      "hours": 0.010738001314924393,
+      "clubPoints": 0.07082287968441814,
       "elevation": 112.8
     },
     {
