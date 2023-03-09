@@ -1,9 +1,9 @@
 {
-  "timestamp": 1678365755,
+  "timestamp": 1678368910,
   "totalData": {
-    "totalDistance": 1224.5075866666666,
-    "totalHours": 207.49361111111102,
-    "totalPoints": 17.006704070325767
+    "totalDistance": 1233.8093866666666,
+    "totalHours": 208.31722222222214,
+    "totalPoints": 17.09239795852259
   },
   "summary": [
     {
@@ -43,10 +43,10 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 185.83756666666667,
-      "hours": 0.2583579881656805,
-      "clubPoints": 1.0996305719921105,
-      "elevation": 4251
+      "distance": 190.90586666666667,
+      "hours": 0.26091880341880347,
+      "clubPoints": 1.1296205128205128,
+      "elevation": 4299
     },
     {
       "name": "Omega NTNU",
@@ -57,10 +57,10 @@
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 83.2465,
-      "hours": 0.24586988304093566,
-      "clubPoints": 1.0953486842105262,
-      "elevation": 2352.4
+      "distance": 87.48,
+      "hours": 0.2510124269005848,
+      "clubPoints": 1.1510526315789473,
+      "elevation": 2396.4
     }
   ]
 }
