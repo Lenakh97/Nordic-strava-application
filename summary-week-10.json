@@ -1,24 +1,24 @@
 {
-  "timestamp": 1678375398,
+  "timestamp": 1678379442,
   "totalData": {
-    "totalDistance": 1255.6843199999998,
-    "totalHours": 223.92111111111103,
-    "totalPoints": 17.35751630219304
+    "totalDistance": 1294.3498866666664,
+    "totalHours": 234.23694444444436,
+    "totalPoints": 17.903516677238354
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 223.1875866666667,
-      "hours": 0.6470892018779343,
-      "clubPoints": 3.143487136150234,
-      "elevation": 3477.9
+      "distance": 239.87952000000004,
+      "hours": 0.6884780907668232,
+      "clubPoints": 3.3785847887323937,
+      "elevation": 3624.9
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 127.21316666666667,
-      "hours": 0.6584226190476189,
-      "clubPoints": 4.543327380952381,
-      "elevation": 1081.3
+      "distance": 133.0684,
+      "hours": 0.6906051587301586,
+      "clubPoints": 4.752442857142857,
+      "elevation": 1176.3
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -44,22 +44,22 @@
     {
       "name": "Nordic Semiconductor - Trondheim Office",
       "distance": 195.1513,
-      "hours": 0.3312261669953978,
+      "hours": 0.3587294543063774,
       "clubPoints": 1.1547414201183432,
-      "elevation": 9568.5
+      "elevation": 12021.5
     },
     {
       "name": "Omega NTNU",
-      "distance": 427.99100000000004,
-      "hours": 0.1649918214710573,
-      "clubPoints": 1.462704190237973,
-      "elevation": 3749.8999999999996
+      "distance": 439.30940000000004,
+      "hours": 0.1692741498745461,
+      "clubPoints": 1.5013335417738092,
+      "elevation": 3866.8999999999996
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 96.44316666666667,
-      "hours": 0.2769188596491228,
-      "clubPoints": 1.2689890350877193,
+      "distance": 101.24316666666667,
+      "hours": 0.28446271929824557,
+      "clubPoints": 1.3321469298245614,
       "elevation": 2614.4
     }
   ]
