@@ -1,24 +1,24 @@
 {
-  "timestamp": 1678984295,
+  "timestamp": 1678987163,
   "totalData": {
-    "totalDistance": 1078.8289,
-    "totalHours": 191.72666666666663,
-    "totalPoints": 15.614432102401821
+    "totalDistance": 1128.2010666666667,
+    "totalHours": 198.32305555555553,
+    "totalPoints": 16.35765485125704
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 188.9784666666667,
-      "hours": 0.5854460093896714,
-      "clubPoints": 2.661668544600939,
-      "elevation": 2964.1
+      "distance": 191.8503666666667,
+      "hours": 0.5924569640062598,
+      "clubPoints": 2.702117840375587,
+      "elevation": 2987.6
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 124.97903333333332,
-      "hours": 0.8288392857142857,
-      "clubPoints": 4.463536904761904,
-      "elevation": 1344.5
+      "distance": 141.26729999999998,
+      "hours": 0.9251190476190476,
+      "clubPoints": 5.045260714285714,
+      "elevation": 1630.5
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -43,22 +43,22 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 172.63723333333337,
-      "hours": 0.21223044049967132,
-      "clubPoints": 1.0215220907297833,
-      "elevation": 3513.5
+      "distance": 179.80003333333337,
+      "hours": 0.21832511505588434,
+      "clubPoints": 1.063905522682446,
+      "elevation": 3565.7
     },
     {
       "name": "Omega NTNU",
-      "distance": 365.26279999999997,
-      "hours": 0.13395904436860068,
-      "clubPoints": 1.2466307167235493,
-      "elevation": 2427.2000000000003
+      "distance": 388.31199999999995,
+      "hours": 0.14034508911642016,
+      "clubPoints": 1.3252969283276448,
+      "elevation": 2624.3
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
       "distance": 31.916966666666667,
-      "hours": 0.1906176900584795,
+      "hours": 0.19721856725146197,
       "clubPoints": 0.41996008771929827,
       "elevation": 809.6
     }
