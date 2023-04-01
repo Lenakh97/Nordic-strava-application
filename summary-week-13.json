@@ -1,9 +1,9 @@
 {
-  "timestamp": 1680369307,
+  "timestamp": 1680373261,
   "totalData": {
-    "totalDistance": 2249.1151000000004,
-    "totalHours": 399.4194444444444,
-    "totalPoints": 32.2257691510731
+    "totalDistance": 2296.3831000000005,
+    "totalHours": 404.81666666666666,
+    "totalPoints": 33.44304852118504
   },
   "summary": [
     {
@@ -15,17 +15,17 @@
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 291.87683333333337,
-      "hours": 2.3733134920634926,
-      "clubPoints": 10.424172619047619,
-      "elevation": 9141.800000000001
+      "distance": 314.8901333333334,
+      "hours": 2.455902777777778,
+      "clubPoints": 11.24607619047619,
+      "elevation": 9243.400000000001
     },
     {
       "name": "Nordic Semiconductor - Europe",
-      "distance": 138.95713333333333,
-      "hours": 0.40348108747044914,
-      "clubPoints": 2.9565347517730496,
-      "elevation": 957.4999999999999
+      "distance": 155.96593333333334,
+      "hours": 0.4408333333333333,
+      "clubPoints": 3.318424113475177,
+      "elevation": 999.0999999999999
     },
     {
       "name": "Nordic Semiconductor - APAC",
@@ -43,17 +43,17 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 390.6571,
-      "hours": 0.46937705456936235,
-      "clubPoints": 2.3115804733727807,
-      "elevation": 8136.4
+      "distance": 394.1538,
+      "hours": 0.4748980933596319,
+      "clubPoints": 2.3322710059171596,
+      "elevation": 8262.4
     },
     {
       "name": "Omega NTNU",
-      "distance": 775.1012999999997,
-      "hours": 0.3199649222601441,
-      "clubPoints": 2.645396928327644,
-      "elevation": 8470.400000000001
+      "distance": 778.8504999999997,
+      "hours": 0.32131683731513083,
+      "clubPoints": 2.658192832764504,
+      "elevation": 8535.2
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
