@@ -1,9 +1,9 @@
 {
-  "timestamp": 1683105449,
+  "timestamp": 1683109169,
   "totalData": {
-    "totalDistance": 1898.3433133333333,
-    "totalHours": 318.2902777777778,
-    "totalPoints": 23.833205506212963
+    "totalDistance": 1933.81698,
+    "totalHours": 330.4563888888889,
+    "totalPoints": 24.454142360472396
   },
   "summary": [
     {
@@ -15,10 +15,10 @@
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 145.27276666666666,
-      "hours": 1.1851785714285714,
-      "clubPoints": 5.188313095238095,
-      "elevation": 4986.200000000001
+      "distance": 157.77766666666665,
+      "hours": 1.2402678571428571,
+      "clubPoints": 5.634916666666666,
+      "elevation": 5020.200000000001
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -29,10 +29,10 @@
     },
     {
       "name": "Nordic Semiconductor - APAC",
-      "distance": 183.71566666666664,
-      "hours": 0.5561351165980797,
-      "clubPoints": 2.2680946502057613,
-      "elevation": 3228.499999999999
+      "distance": 194.66386666666665,
+      "hours": 0.6605006858710564,
+      "clubPoints": 2.403257613168724,
+      "elevation": 3343.599999999999
     },
     {
       "name": "Nordic Semiconductor - USA",
@@ -43,17 +43,17 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 484.9436333333334,
-      "hours": 0.443594072139154,
-      "clubPoints": 2.66447425689065,
-      "elevation": 9594.500000000004
+      "distance": 485.6771000000001,
+      "hours": 0.4486654139727909,
+      "clubPoints": 2.668482271462599,
+      "elevation": 9604.800000000003
     },
     {
       "name": "Omega NTNU",
-      "distance": 422.20349999999996,
-      "hours": 0.13471154507674213,
-      "clubPoints": 1.3115434608463459,
-      "elevation": 4553.200000000001
+      "distance": 433.4906,
+      "hours": 0.13858053088498026,
+      "clubPoints": 1.346705766142296,
+      "elevation": 4782.400000000001
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
