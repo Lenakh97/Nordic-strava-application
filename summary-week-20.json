@@ -1,24 +1,24 @@
 {
-  "timestamp": 1684178052,
+  "timestamp": 1684181910,
   "totalData": {
-    "totalDistance": 547.2211933333334,
-    "totalHours": 71.38333333333333,
-    "totalPoints": 5.529944055032014
+    "totalDistance": 578.0781933333334,
+    "totalHours": 74.79638888888888,
+    "totalPoints": 5.889019385029885
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
       "distance": 101.98719999999999,
-      "hours": 0.22613194444444448,
+      "hours": 0.2286979166666667,
       "clubPoints": 1.2748399999999998,
       "elevation": 1253.4
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 10.363433333333335,
-      "hours": 0.08206349206349207,
-      "clubPoints": 0.370122619047619,
-      "elevation": 136
+      "distance": 15.797333333333334,
+      "hours": 0.1130357142857143,
+      "clubPoints": 0.5641904761904761,
+      "elevation": 297
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -43,24 +43,24 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 144.39732666666666,
-      "hours": 0.09811020036429874,
-      "clubPoints": 0.7890564298724954,
-      "elevation": 3300.7
+      "distance": 158.79342666666665,
+      "hours": 0.10560261080752885,
+      "clubPoints": 0.8677236429872495,
+      "elevation": 3485.2999999999997
     },
     {
       "name": "Omega NTNU",
-      "distance": 165.09629999999999,
-      "hours": 0.05115583075335396,
-      "clubPoints": 0.5111340557275541,
-      "elevation": 1831.2
+      "distance": 170.8457,
+      "hours": 0.05262813897488819,
+      "clubPoints": 0.5289340557275541,
+      "elevation": 1861.9
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 41.9496,
-      "hours": 0.07696969696969698,
-      "clubPoints": 0.5448000000000001,
-      "elevation": 850.6
+      "distance": 47.227199999999996,
+      "hours": 0.0833838383838384,
+      "clubPoints": 0.6133402597402599,
+      "elevation": 951.6
     }
   ]
 }
