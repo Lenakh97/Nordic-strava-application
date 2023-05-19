@@ -1,9 +1,9 @@
 {
-  "timestamp": 1684480573,
+  "timestamp": 1684484557,
   "totalData": {
-    "totalDistance": 2181.6951733333335,
-    "totalHours": 347.6963888888889,
-    "totalPoints": 27.60463848103907
+    "totalDistance": 2200.8892733333337,
+    "totalHours": 352.19222222222226,
+    "totalPoints": 27.879737182272063
   },
   "summary": [
     {
@@ -15,10 +15,10 @@
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 119.63676666666669,
-      "hours": 1.1143353174603172,
-      "clubPoints": 4.272741666666667,
-      "elevation": 1072.9
+      "distance": 121.74993333333336,
+      "hours": 1.1253373015873014,
+      "clubPoints": 4.348211904761905,
+      "elevation": 1083.9
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -29,10 +29,10 @@
     },
     {
       "name": "Nordic Semiconductor - APAC",
-      "distance": 185.61206666666672,
-      "hours": 0.39954046639231816,
-      "clubPoints": 2.2915069958847734,
-      "elevation": 2325.7000000000003
+      "distance": 198.6186666666667,
+      "hours": 0.44323731138545946,
+      "clubPoints": 2.4520823045267486,
+      "elevation": 2437.7000000000003
     },
     {
       "name": "Nordic Semiconductor - USA",
@@ -43,10 +43,10 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 468.9837133333333,
-      "hours": 0.3913934426229509,
-      "clubPoints": 2.562752531876138,
-      "elevation": 12589.099999999999
+      "distance": 470.82621333333327,
+      "hours": 0.3933105646630238,
+      "clubPoints": 2.572820837887067,
+      "elevation": 12629.899999999998
     },
     {
       "name": "Omega NTNU",
@@ -57,10 +57,10 @@
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 176.47372666666666,
-      "hours": 0.5191919191919192,
-      "clubPoints": 2.29186658008658,
-      "elevation": 5254.599999999999
+      "distance": 178.70556,
+      "hours": 0.5230555555555556,
+      "clubPoints": 2.3208514285714283,
+      "elevation": 5303.9
     }
   ]
 }
