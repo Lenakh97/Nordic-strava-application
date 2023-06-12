@@ -1,17 +1,17 @@
 {
-  "timestamp": 1686587028,
+  "timestamp": 1686590119,
   "totalData": {
-    "totalDistance": 359.648,
-    "totalHours": 69.24527777777779,
-    "totalPoints": 6.191025582884945
+    "totalDistance": 419.815,
+    "totalHours": 81.12666666666668,
+    "totalPoints": 6.595189259114774
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 73.10243333333334,
-      "hours": 0.12749652777777779,
-      "clubPoints": 0.9137804166666665,
-      "elevation": 820.4
+      "distance": 84.24446666666667,
+      "hours": 0.1433090277777778,
+      "clubPoints": 1.053055833333333,
+      "elevation": 877.4
     },
     {
       "name": "Nordic Semiconductor - Poland",
@@ -22,10 +22,10 @@
     },
     {
       "name": "Nordic Semiconductor - Europe",
-      "distance": 23.4747,
-      "hours": 0.23177672955974846,
-      "clubPoints": 0.4429188679245283,
-      "elevation": 170.5
+      "distance": 28.499366666666667,
+      "hours": 0.25356918238993714,
+      "clubPoints": 0.5377238993710691,
+      "elevation": 338.4
     },
     {
       "name": "Nordic Semiconductor - APAC",
@@ -43,22 +43,22 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 47.05656666666666,
-      "hours": 0.038794778384942316,
-      "clubPoints": 0.25713970856102003,
-      "elevation": 634.6
+      "distance": 61.23116666666666,
+      "hours": 0.056548269581056465,
+      "clubPoints": 0.33459653916211296,
+      "elevation": 1669.6
     },
     {
       "name": "Omega NTNU",
-      "distance": 91.6391,
-      "hours": 0.027478433402346448,
-      "clubPoints": 0.28459347826086956,
-      "elevation": 1105.6
+      "distance": 121.4648,
+      "hours": 0.04352311939268461,
+      "clubPoints": 0.3772198757763975,
+      "elevation": 1389.6999999999998
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
       "distance": 29.862833333333334,
-      "hours": 0.07762626262626263,
+      "hours": 0.09121212121212122,
       "clubPoints": 0.38782900432900436,
       "elevation": 464
     }
