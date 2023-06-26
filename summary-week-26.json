@@ -1,9 +1,9 @@
 {
-  "timestamp": 1687789208,
+  "timestamp": 1687792824,
   "totalData": {
-    "totalDistance": 108.20173333333334,
-    "totalHours": 19.018333333333327,
-    "totalPoints": 1.2837471846267725
+    "totalDistance": 149.03053333333332,
+    "totalHours": 44.45333333333332,
+    "totalPoints": 1.6433860711628328
   },
   "summary": [
     {
@@ -15,17 +15,17 @@
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 11.015200000000002,
-      "hours": 0.05650793650793651,
-      "clubPoints": 0.3934,
-      "elevation": 44
+      "distance": 15.465366666666668,
+      "hours": 0.45193452380952376,
+      "clubPoints": 0.5523345238095239,
+      "elevation": 83
     },
     {
       "name": "Nordic Semiconductor - Europe",
-      "distance": 0,
-      "hours": 0,
-      "clubPoints": 0,
-      "elevation": 0
+      "distance": 2.2674666666666665,
+      "hours": 0.20371069182389934,
+      "clubPoints": 0.04278238993710692,
+      "elevation": 25
     },
     {
       "name": "Nordic Semiconductor - APAC",
@@ -43,24 +43,24 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 1.8289000000000002,
-      "hours": 0.00205525197328476,
-      "clubPoints": 0.009993989071038252,
-      "elevation": 40.8
+      "distance": 11.8449,
+      "hours": 0.007475713418336369,
+      "clubPoints": 0.06472622950819672,
+      "elevation": 170.8
     },
     {
       "name": "Omega NTNU",
-      "distance": 56.3146,
-      "hours": 0.016604747162022704,
-      "clubPoints": 0.1743486068111455,
-      "elevation": 1131.9
+      "distance": 77.5191,
+      "hours": 0.02262125902992776,
+      "clubPoints": 0.239997213622291,
+      "elevation": 1585.4
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 5.547433333333333,
-      "hours": 0.022207792207792208,
-      "clubPoints": 0.07204458874458874,
-      "elevation": 28
+      "distance": 8.4381,
+      "hours": 0.030404040404040406,
+      "clubPoints": 0.10958571428571429,
+      "elevation": 192
     }
   ]
 }
