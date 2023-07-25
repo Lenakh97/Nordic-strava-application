@@ -1,17 +1,17 @@
 {
-  "timestamp": 1690298360,
+  "timestamp": 1690302226,
   "totalData": {
-    "totalDistance": 1102.7279799999997,
-    "totalHours": 302.85944444444436,
-    "totalPoints": 11.232580901166514
+    "totalDistance": 1151.4378466666662,
+    "totalHours": 311.47472222222217,
+    "totalPoints": 11.593336121516646
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 269.7440066666667,
-      "hours": 0.5797083333333334,
-      "clubPoints": 3.371800083333333,
-      "elevation": 4394.300000000001
+      "distance": 280.20484,
+      "hours": 0.6028854166666667,
+      "clubPoints": 3.5025604999999995,
+      "elevation": 4521.9000000000015
     },
     {
       "name": "Nordic Semiconductor - Poland",
@@ -36,29 +36,29 @@
     },
     {
       "name": "Nordic Semiconductor - USA",
-      "distance": 14.365799999999997,
-      "hours": 0.07809722222222222,
-      "clubPoints": 0.7182899999999999,
-      "elevation": 140.1
+      "distance": 16.33013333333333,
+      "hours": 0.1385,
+      "clubPoints": 0.8165066666666665,
+      "elevation": 184.2
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 165.51366666666664,
-      "hours": 0.12389040680024285,
-      "clubPoints": 0.9044462659380692,
-      "elevation": 3468.4
+      "distance": 173.83486666666664,
+      "hours": 0.133814511232544,
+      "clubPoints": 0.9499173041894353,
+      "elevation": 3576.4
     },
     {
       "name": "Omega NTNU",
-      "distance": 420.12949999999995,
-      "hours": 0.582133058984911,
-      "clubPoints": 1.296695987654321,
-      "elevation": 5611.299999999999
+      "distance": 448.09299999999996,
+      "hours": 0.5916769547325105,
+      "clubPoints": 1.3830030864197531,
+      "elevation": 6190.199999999999
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
       "distance": 66.5133,
-      "hours": 0.3013111111111111,
+      "hours": 0.3099074074074074,
       "clubPoints": 0.886844,
       "elevation": 2032.5
     }
