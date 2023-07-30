@@ -1,17 +1,17 @@
 {
-  "timestamp": 1690734058,
+  "timestamp": 1690737267,
   "totalData": {
-    "totalDistance": 4132.236533333332,
-    "totalHours": 819.6691666666667,
-    "totalPoints": 41.731729070005855
+    "totalDistance": 4194.456699999999,
+    "totalHours": 834.1666666666666,
+    "totalPoints": 42.37455962017426
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 769.0663666666667,
-      "hours": 1.6628888888888889,
-      "clubPoints": 9.613329583333336,
-      "elevation": 13583.900000000003
+      "distance": 773.7060666666666,
+      "hours": 1.6907222222222222,
+      "clubPoints": 9.671325833333336,
+      "elevation": 13709.300000000003
     },
     {
       "name": "Nordic Semiconductor - Poland",
@@ -22,10 +22,10 @@
     },
     {
       "name": "Nordic Semiconductor - Europe",
-      "distance": 155.10139999999996,
-      "hours": 0.40653563941299786,
-      "clubPoints": 2.9264415094339618,
-      "elevation": 1523.8999999999999
+      "distance": 164.87009999999995,
+      "hours": 0.43460691823899367,
+      "clubPoints": 3.1107566037735843,
+      "elevation": 1582.8999999999999
     },
     {
       "name": "Nordic Semiconductor - APAC",
@@ -43,10 +43,10 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 946.1490333333333,
-      "hours": 0.9839450516089858,
-      "clubPoints": 5.170213296903462,
-      "elevation": 31770.800000000007
+      "distance": 976.2640999999999,
+      "hours": 1.0164374620522159,
+      "clubPoints": 5.334776502732241,
+      "elevation": 32669.600000000006
     },
     {
       "name": "Omega NTNU",
@@ -57,10 +57,10 @@
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 233.10506666666663,
-      "hours": 1.0104444444444443,
-      "clubPoints": 3.1080675555555555,
-      "elevation": 9193.1
+      "distance": 250.80176666666662,
+      "hours": 1.0749370370370368,
+      "clubPoints": 3.3440235555555553,
+      "elevation": 10386.1
     }
   ]
 }
