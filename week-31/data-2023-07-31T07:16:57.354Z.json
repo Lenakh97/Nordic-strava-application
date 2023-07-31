@@ -1,24 +1,24 @@
 {
-  "timestamp": 1690787818,
+  "timestamp": 1690787817,
   "totalData": {
-    "totalDistance": 53.3948,
-    "totalHours": 7.952222222222224,
-    "totalPoints": 0.5852320123239945
+    "totalDistance": 19.38556666666667,
+    "totalHours": 2.2094444444444448,
+    "totalPoints": 0.10815163974903866
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 11.930366666666664,
-      "hours": 0.020038194444444445,
-      "clubPoints": 0.14912958333333332,
-      "elevation": 114.4
+      "distance": 2.5106666666666664,
+      "hours": 0.004434027777777778,
+      "clubPoints": 0.03138333333333333,
+      "elevation": 30
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 2.2043333333333335,
-      "hours": 0.010168650793650794,
-      "clubPoints": 0.07872619047619048,
-      "elevation": 32
+      "distance": 0,
+      "hours": 0,
+      "clubPoints": 0,
+      "elevation": 0
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -29,17 +29,17 @@
     },
     {
       "name": "Nordic Semiconductor - APAC",
-      "distance": 0.865,
-      "hours": 0.0028819444444444444,
-      "clubPoints": 0.0108125,
+      "distance": 0,
+      "hours": 0,
+      "clubPoints": 0,
       "elevation": 0
     },
     {
       "name": "Nordic Semiconductor - USA",
-      "distance": 4.335100000000001,
-      "hours": 0.12608333333333333,
-      "clubPoints": 0.216755,
-      "elevation": 47
+      "distance": 0,
+      "hours": 0,
+      "clubPoints": 0,
+      "elevation": 0
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
@@ -50,10 +50,10 @@
     },
     {
       "name": "Omega NTNU",
-      "distance": 30.290499999999998,
-      "hours": 0.008096707818930042,
-      "clubPoints": 0.09348919753086418,
-      "elevation": 158.6
+      "distance": 13.1054,
+      "hours": 0.003598251028806585,
+      "clubPoints": 0.040448765432098764,
+      "elevation": 0
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
