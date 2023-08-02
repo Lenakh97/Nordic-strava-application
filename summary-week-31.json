@@ -1,31 +1,31 @@
 {
-  "timestamp": 1691000480,
+  "timestamp": 1691003628,
   "totalData": {
-    "totalDistance": 1668.2944933333335,
-    "totalHours": 264.72666666666663,
-    "totalPoints": 19.822511795491618
+    "totalDistance": 1738.3222600000001,
+    "totalHours": 276.13416666666666,
+    "totalPoints": 20.960586366166826
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
       "distance": 324.79166000000004,
-      "hours": 0.587357638888889,
+      "hours": 0.5962500000000002,
       "clubPoints": 4.059895750000001,
       "elevation": 5042.1
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 121.67783333333331,
-      "hours": 0.901815476190476,
-      "clubPoints": 4.345636904761905,
-      "elevation": 1780.2
+      "distance": 145.91646666666665,
+      "hours": 1.0477182539682537,
+      "clubPoints": 5.2113023809523815,
+      "elevation": 2041.5
     },
     {
       "name": "Nordic Semiconductor - Europe",
-      "distance": 56.99419999999999,
-      "hours": 0.09998427672955974,
-      "clubPoints": 1.0753622641509435,
-      "elevation": 281.1
+      "distance": 61.64643333333333,
+      "hours": 0.1156446540880503,
+      "clubPoints": 1.1631402515723273,
+      "elevation": 297.40000000000003
     },
     {
       "name": "Nordic Semiconductor - APAC",
@@ -43,17 +43,17 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 336.59813333333335,
-      "hours": 0.4545916818457802,
-      "clubPoints": 1.8393340619307834,
-      "elevation": 9429.2
+      "distance": 360.84703333333334,
+      "hours": 0.47296751669702486,
+      "clubPoints": 1.9718417122040075,
+      "elevation": 10186.2
     },
     {
       "name": "Omega NTNU",
-      "distance": 551.9026,
-      "hours": 0.1766400891632373,
-      "clubPoints": 1.7034030864197534,
-      "elevation": 8198.800000000001
+      "distance": 568.7906,
+      "hours": 0.18410322359396433,
+      "clubPoints": 1.7555265432098768,
+      "elevation": 8317.800000000001
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
