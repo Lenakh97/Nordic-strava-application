@@ -1,9 +1,9 @@
 {
-  "timestamp": 1693073998,
+  "timestamp": 1693077215,
   "totalData": {
-    "totalDistance": 3606.991653333332,
-    "totalHours": 610.122222222222,
-    "totalPoints": 41.41407265283324
+    "totalDistance": 3611.126553333332,
+    "totalHours": 611.0724999999998,
+    "totalPoints": 41.492089633965314
   },
   "summary": [
     {
@@ -22,10 +22,10 @@
     },
     {
       "name": "Nordic Semiconductor - Europe",
-      "distance": 204.0085,
-      "hours": 1.0002620545073375,
-      "clubPoints": 3.849216981132076,
-      "elevation": 5702.000000000001
+      "distance": 208.14339999999999,
+      "hours": 1.0119025157232704,
+      "clubPoints": 3.9272339622641517,
+      "elevation": 5727.000000000001
     },
     {
       "name": "Nordic Semiconductor - APAC",
@@ -37,7 +37,7 @@
     {
       "name": "Nordic Semiconductor - USA",
       "distance": 111.67154666666666,
-      "hours": 1.3031944444444443,
+      "hours": 1.319861111111111,
       "clubPoints": 5.5835773333333325,
       "elevation": 1205.8000000000002
     },
