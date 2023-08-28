@@ -1,24 +1,24 @@
 {
-  "timestamp": 1693242948,
+  "timestamp": 1693246929,
   "totalData": {
-    "totalDistance": 255.8568,
-    "totalHours": 63.85194444444445,
-    "totalPoints": 3.5084189931301917
+    "totalDistance": 311.22686666666664,
+    "totalHours": 72.61916666666667,
+    "totalPoints": 3.994446380551766
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 40.16303333333334,
-      "hours": 0.10896527777777779,
-      "clubPoints": 0.5020379166666666,
-      "elevation": 570.9
+      "distance": 51.562066666666674,
+      "hours": 0.13888541666666668,
+      "clubPoints": 0.6445258333333332,
+      "elevation": 750.9
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 20.34033333333333,
-      "hours": 0.5869742063492065,
-      "clubPoints": 0.7264404761904761,
-      "elevation": 161.5
+      "distance": 25.05833333333333,
+      "hours": 0.6388293650793653,
+      "clubPoints": 0.8949404761904761,
+      "elevation": 195.5
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -43,22 +43,22 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 4.4288,
-      "hours": 0.009225865209471766,
-      "clubPoints": 0.024201092896174864,
-      "elevation": 15.7
+      "distance": 27.089333333333332,
+      "hours": 0.02207953855494839,
+      "clubPoints": 0.14802914389799637,
+      "elevation": 276
     },
     {
       "name": "Omega NTNU",
-      "distance": 90.92629999999998,
-      "hours": 0.03229766803840878,
-      "clubPoints": 0.2806367283950617,
-      "elevation": 981.6999999999999
+      "distance": 107.51879999999998,
+      "hours": 0.03799554183813443,
+      "clubPoints": 0.3318481481481481,
+      "elevation": 1131.6999999999998
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
       "distance": 30.46226666666666,
-      "hours": 0.06501126126126125,
+      "hours": 0.07478603603603602,
       "clubPoints": 0.4116522522522522,
       "elevation": 710.5
     }
