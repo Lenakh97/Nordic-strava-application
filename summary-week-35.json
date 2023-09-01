@@ -1,24 +1,24 @@
 {
-  "timestamp": 1693588540,
+  "timestamp": 1693592416,
   "totalData": {
-    "totalDistance": 1921.7102333333337,
-    "totalHours": 410.3852777777778,
-    "totalPoints": 22.962502738712452
+    "totalDistance": 1944.354566666667,
+    "totalHours": 417.47027777777777,
+    "totalPoints": 23.220427708028957
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 358.9011666666666,
-      "hours": 0.8627708333333332,
-      "clubPoints": 4.486264583333334,
-      "elevation": 4097.700000000001
+      "distance": 368.8484666666666,
+      "hours": 0.8769999999999998,
+      "clubPoints": 4.6106058333333335,
+      "elevation": 4119.700000000001
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 150.03429999999997,
-      "hours": 2.4360218253968253,
-      "clubPoints": 5.358367857142856,
-      "elevation": 1577.8
+      "distance": 152.4178333333333,
+      "hours": 2.511954365079365,
+      "clubPoints": 5.443494047619046,
+      "elevation": 1599.8
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -43,22 +43,22 @@
     },
     {
       "name": "Nordic Semiconductor - Trondheim Office",
-      "distance": 247.00603333333333,
-      "hours": 0.23882817243472979,
-      "clubPoints": 1.3497597449908925,
-      "elevation": 5174.5
+      "distance": 253.99733333333333,
+      "hours": 0.2472616879174256,
+      "clubPoints": 1.3879635701275044,
+      "elevation": 5376.5
     },
     {
       "name": "Omega NTNU",
-      "distance": 721.1533999999999,
-      "hours": 0.2300025720164609,
-      "clubPoints": 2.225782098765432,
-      "elevation": 8024
+      "distance": 724.4755999999999,
+      "hours": 0.23105024005486968,
+      "clubPoints": 2.236035802469136,
+      "elevation": 8045
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
       "distance": 161.4124,
-      "hours": 0.9406665741083549,
+      "hours": 0.9672114751738039,
       "clubPoints": 2.1969216463038386,
       "elevation": 3375.3
     }
