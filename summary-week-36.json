@@ -1,24 +1,24 @@
 {
-  "timestamp": 1694093020,
+  "timestamp": 1694096210,
   "totalData": {
-    "totalDistance": 1439.361946666666,
-    "totalHours": 299.47694444444454,
-    "totalPoints": 21.129478639813605
+    "totalDistance": 1462.8012133333327,
+    "totalHours": 302.8455555555557,
+    "totalPoints": 21.377170234000747
   },
   "summary": [
     {
       "name": "Nordic Semiconductor - Finland",
-      "distance": 271.41794666666664,
-      "hours": 0.5497326388888888,
-      "clubPoints": 3.3927243333333337,
-      "elevation": 3926.2
+      "distance": 274.7606133333333,
+      "hours": 0.5571006944444443,
+      "clubPoints": 3.434507666666667,
+      "elevation": 3951.7
     },
     {
       "name": "Nordic Semiconductor - Poland",
-      "distance": 192.85886666666676,
-      "hours": 2.499454365079365,
-      "clubPoints": 6.887816666666666,
-      "elevation": 3126.7999999999997
+      "distance": 196.51676666666677,
+      "hours": 2.5180257936507937,
+      "clubPoints": 7.018455952380951,
+      "elevation": 3223.7999999999997
     },
     {
       "name": "Nordic Semiconductor - Europe",
@@ -30,7 +30,7 @@
     {
       "name": "Nordic Semiconductor - APAC",
       "distance": 61.9329,
-      "hours": 0.09920138888888888,
+      "hours": 0.10355208333333332,
       "clubPoints": 0.77416125,
       "elevation": 348.8
     },
@@ -50,17 +50,17 @@
     },
     {
       "name": "Omega NTNU",
-      "distance": 457.1093999999999,
-      "hours": 0.14564386145404665,
-      "clubPoints": 1.4108314814814813,
-      "elevation": 7871.200000000001
+      "distance": 471.2363999999999,
+      "hours": 0.1505701303155007,
+      "clubPoints": 1.4544333333333332,
+      "elevation": 8095.200000000001
     },
     {
       "name": "Nordic Semiconductor - Oslo Office",
-      "distance": 82.97763333333332,
-      "hours": 0.2689916286149162,
-      "clubPoints": 1.136679908675799,
-      "elevation": 2767.7999999999993
+      "distance": 85.28933333333332,
+      "hours": 0.2733066971080669,
+      "clubPoints": 1.1683470319634703,
+      "elevation": 2826.7999999999993
     }
   ]
 }
