@@ -32,7 +32,7 @@
     "typescript": "4.9.5"
   },
   "dependencies": {
-    "@nordicsemiconductor/from-env": "1.0.3",
+    "@nordicsemiconductor/from-env": "3.0.1",
     "axios": "^0.27.2",
     "date-fns": "^2.30.0",
     "parse-link-header": "^1.0.1"
