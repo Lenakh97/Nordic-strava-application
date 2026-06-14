@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@nordicsemiconductor/from-env": "1.0.3",
-    "axios": "^0.27.2",
+    "axios": "^0.33.0",
     "date-fns": "^2.30.0",
     "parse-link-header": "^1.0.1"
   },
